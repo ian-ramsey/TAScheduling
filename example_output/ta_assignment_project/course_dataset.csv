@@ -1,0 +1,202 @@
+course_number,course_name,course_supervisor(s),days1,times1,days2,times2,ta_assigned,ta_needed,workload_1,workload_2,workload_3,workload_4
+MATH:0100:0221,Basic Algebra I,Instructors:Cynthia Farthing(Course Supervisor),MWF,2:30P - 3:20P,,,,1,1.0,1.0,1.0,1.0
+MATH:0100:0331,Basic Algebra I,Instructors:Cynthia Farthing(Course Supervisor),MWF,3:30P - 4:20P,,,,1,1.0,1.0,1.0,1.0
+MATH:1005:0073,College Algebra,Instructors:Cynthia Farthing(Course Supervisor),MTWTh,7:30A - 8:20A,,,,1,1.0,1.0,1.0,1.0
+MATH:1005:0083,College Algebra,Instructors:Cynthia Farthing(Course Supervisor),MTWTh,8:30A - 9:20A,,,,1,1.0,1.0,1.0,1.0
+MATH:1005:0084,College Algebra,Instructors:Cynthia Farthing(Course Supervisor),MTWTh,4:30P - 5:20P,,,,1,1.0,1.0,1.0,1.0
+MATH:1005:0091,College Algebra,Instructors:Cynthia Farthing(Course Supervisor),MTWTh,9:30A - 10:20A,,,,1,1.0,1.0,1.0,1.0
+MATH:1005:0101,College Algebra,Instructors:Cynthia Farthing(Course Supervisor),MTWTh,1:30P - 2:20P,,,,1,1.0,1.0,1.0,1.0
+MATH:1005:0111,College Algebra,Instructors:Cynthia Farthing(Course Supervisor),MTWTh,11:30A - 12:20P,,,,1,1.0,1.0,1.0,1.0
+MATH:1005:0112,College Algebra,Instructors:Cynthia Farthing(Course Supervisor),MTWTh,10:30A - 11:20A,,,,1,1.0,1.0,1.0,1.0
+MATH:1005:0121,College Algebra,Instructors:Cynthia Farthing(Course Supervisor),MTWTh,12:30P - 1:20P,,,,1,1.0,1.0,1.0,1.0
+MATH:1005:0122,College Algebra,Instructors:Cynthia Farthing(Course Supervisor),MTWTh,3:30P - 4:20P,,,,1,1.0,1.0,1.0,1.0
+MATH:1005:0123,College Algebra,Instructors:Cynthia Farthing(Course Supervisor),MTWTh,8:30A - 9:20A,,,,1,1.0,1.0,1.0,1.0
+MATH:1005:0124,College Algebra,Instructors:Cynthia Farthing(Course Supervisor),MTWTh,11:30A - 12:20P,,,,1,1.0,1.0,1.0,1.0
+MATH:1005:0231,College Algebra,Instructors:Cynthia Farthing(Primary Instructor),MTWTh,2:30P - 3:20P,,,,0,1.0,1.0,1.0,1.0
+MATH:1005:0232,College Algebra,Instructors:Cynthia Farthing(Course Supervisor),MTWTh,12:30P - 1:20P,,,,1,1.0,1.0,1.0,1.0
+MATH:1005:0233,College Algebra,Instructors:Cynthia Farthing(Course Supervisor),MTWTh,1:30P - 2:20P,,,,1,1.0,1.0,1.0,1.0
+MATH:1005:0331,College Algebra,Instructors:Cynthia Farthing(Course Supervisor),MTWTh,3:30P - 4:20P,,,,1,1.0,1.0,1.0,1.0
+MATH:1005:0431,College Algebra,Instructors:Cynthia Farthing(Course Supervisor),MTWTh,11:30A - 12:20P,,,,1,1.0,1.0,1.0,1.0
+MATH:1005:0433,College Algebra,Instructors:Cynthia Farthing(Course Supervisor),MTWTh,1:30P - 2:20P,,,,1,1.0,1.0,1.0,1.0
+MATH:1005:0632,College Algebra,Instructors:Cynthia Farthing(Course Supervisor),MTWTh,2:30P - 3:20P,,,,1,1.0,1.0,1.0,1.0
+MATH:1010:0231,Trigonometry,Instructors:Olga Sokratova(Course Supervisor),MWF,2:30P - 3:20P,,,,1,1.0,1.0,1.0,1.0
+MATH:1010:0331,Trigonometry,Instructors:Olga Sokratova(Course Supervisor),MWF,3:30P - 4:20P,,,,1,1.0,1.0,1.0,1.0
+MATH:1020:0081,Elementary Functions,Instructors:Olga Sokratova(Course Supervisor),MTWF,8:30A - 9:20A,,,,1,1.0,1.0,1.0,1.0
+MATH:1020:0101,Elementary Functions,Instructors:Olga Sokratova(Course Supervisor),MTWF,10:30A - 11:20A,,,,1,1.0,1.0,1.0,1.0
+MATH:1020:0331,Elementary Functions,Instructors:Olga Sokratova(Course Supervisor),MTWF,3:30P - 4:20P,,,,1,1.0,1.0,1.0,1.0
+MATH:1020:0631,Elementary Functions,Instructors:Olga Sokratova(Course Supervisor),TTh,6:30P - 8:20P,,,,1,1.0,1.0,1.0,1.0
+MATH:1120:0AAA,Logic of Arithmetic,Instructors:Krishnendu Khan(Primary Instructor),MW,3:30P - 4:20P,,,,0,1.0,0.5,0.5,0.5
+MATH:1120:0A04,Logic of Arithmetic,Instructors:Krishnendu Khan(Course Supervisor),TTh,5:00P - 5:50P,,,,0,1.0,0.5,0.5,0.5
+MATH:1210:0EXW,Diverse Perspectives in Mathematical Sci,Instructors:Margaret Murray(Primary Instructor),,,,,,0,0.5,0.3333,0.3333,0.3333
+MATH:1340:0AAA,Mathematics for Business,,MWF,12:30P - 1:20P,,,,0,0.5,0.3333,0.3333,0.3333
+MATH:1340:0A06,Mathematics for Business,,TTh,9:30A - 10:20A,,,,0,0.5,0.3333,0.3333,0.3333
+MATH:1340:0A13,Mathematics for Business,,TTh,5:00P - 5:50P,,,,0,0.5,0.3333,0.3333,0.3333
+MATH:1350:0EXA,Quantitative Reasoning for Business,Instructors:Sergii Bezuglyi(Primary Instructor),MWF,2:30P - 3:20P,,,,0,0.5,0.3333,0.3333,0.3333
+MATH:1350:0A01,Quantitative Reasoning for Business,,TTh,8:30A - 9:20A,,,,1,0.5,0.3333,0.3333,0.3333
+MATH:1350:0A02,Quantitative Reasoning for Business,,TTh,9:30A - 10:20A,,,,1,0.5,0.3333,0.3333,0.3333
+MATH:1350:0A03,Quantitative Reasoning for Business,,TTh,5:00P - 5:50P,,,,1,0.5,0.3333,0.3333,0.3333
+MATH:1350:0A04,Quantitative Reasoning for Business,,TTh,2:00P - 2:50P,,,,1,0.5,0.3333,0.3333,0.3333
+MATH:1350:0A05,Quantitative Reasoning for Business,,TTh,11:00A - 11:50A,,,,1,0.5,0.3333,0.3333,0.3333
+MATH:1350:0A07,Quantitative Reasoning for Business,,TTh,3:30P - 4:20P,,,,1,0.5,0.3333,0.3333,0.3333
+MATH:1350:0A08,Quantitative Reasoning for Business,,TTh,5:00P - 5:50P,,,,1,0.5,0.3333,0.3333,0.3333
+MATH:1350:0A09,Quantitative Reasoning for Business,,TTh,8:30A - 9:20A,,,,1,0.5,0.3333,0.3333,0.3333
+MATH:1350:0A11,Quantitative Reasoning for Business,,TTh,11:00A - 11:50A,,,,1,0.5,0.3333,0.3333,0.3333
+MATH:1350:0A12,Quantitative Reasoning for Business,,TTh,12:30P - 1:20P,,,,1,0.5,0.3333,0.3333,0.3333
+MATH:1350:0A13,Quantitative Reasoning for Business,,TTh,2:00P - 2:50P,,,,1,0.5,0.3333,0.3333,0.3333
+MATH:1350:0A27,Quantitative Reasoning for Business,,TTh,8:30A - 9:20A,,,,1,0.5,0.3333,0.3333,0.3333
+MATH:1350:0EXB,Quantitative Reasoning for Business,Instructors:Sergii Bezuglyi(Primary Instructor),MWF,1:30P - 2:20P,,,,0,0.5,0.3333,0.3333,0.3333
+MATH:1350:0B14,Quantitative Reasoning for Business,,TTh,8:30A - 9:20A,,,,1,0.5,0.3333,0.3333,0.3333
+MATH:1350:0B15,Quantitative Reasoning for Business,,TTh,9:30A - 10:20A,,,,1,0.5,0.3333,0.3333,0.3333
+MATH:1350:0B16,Quantitative Reasoning for Business,,TTh,11:00A - 11:50A,,,,1,0.5,0.3333,0.3333,0.3333
+MATH:1350:0B17,Quantitative Reasoning for Business,,TTh,12:30P - 1:20P,,,,1,0.5,0.3333,0.3333,0.3333
+MATH:1350:0B18,Quantitative Reasoning for Business,,TTh,2:00P - 2:50P,,,,1,0.5,0.3333,0.3333,0.3333
+MATH:1350:0B19,Quantitative Reasoning for Business,,TTh,3:30P - 4:20P,,,,1,0.5,0.3333,0.3333,0.3333
+MATH:1350:0B22,Quantitative Reasoning for Business,,TTh,9:30A - 10:20A,,,,1,0.5,0.3333,0.3333,0.3333
+MATH:1350:0B23,Quantitative Reasoning for Business,,TTh,8:30A - 9:20A,,,,1,0.5,0.3333,0.3333,0.3333
+MATH:1350:0B24,Quantitative Reasoning for Business,,TTh,12:30P - 1:20P,,,,1,0.5,0.3333,0.3333,0.3333
+MATH:1350:0B25,Quantitative Reasoning for Business,,TTh,5:00P - 5:50P,,,,1,0.5,0.3333,0.3333,0.3333
+MATH:1350:0B26,Quantitative Reasoning for Business,,TTh,3:30P - 4:20P,,,,1,0.5,0.3333,0.3333,0.3333
+MATH:1350:0B28,Quantitative Reasoning for Business,,TTh,5:00P - 5:50P,,,,1,0.5,0.3333,0.3333,0.3333
+MATH:1440:0EXA,Mathematics for the Biological Sciences,Instructors:Victor Camillo(Primary Instructor),MWF,10:30A - 11:20A,,,,0,0.5,0.3333,0.3333,0.3333
+MATH:1440:0A02,Mathematics for the Biological Sciences,,TTh,5:00P - 5:50P,,,,1,0.5,0.3333,0.3333,0.3333
+MATH:1440:0A04,Mathematics for the Biological Sciences,,TTh,9:30A - 10:20A,,,,1,0.5,0.3333,0.3333,0.3333
+MATH:1440:0A05,Mathematics for the Biological Sciences,,TTh,2:00P - 2:50P,,,,1,0.5,0.3333,0.3333,0.3333
+MATH:1440:0A08,Mathematics for the Biological Sciences,,TTh,3:30P - 4:20P,,,,1,0.5,0.3333,0.3333,0.3333
+MATH:1440:0A09,Mathematics for the Biological Sciences,,TTh,3:30P - 4:20P,,,"66, TA",1,0.5,0.3333,0.3333,0.3333
+MATH:1440:0A11,Mathematics for the Biological Sciences,,TTh,3:30P - 4:20P,,,,1,0.5,0.3333,0.3333,0.3333
+MATH:1440:0A12,Mathematics for the Biological Sciences,,TTh,3:30P - 4:20P,,,,1,0.5,0.3333,0.3333,0.3333
+MATH:1440:0A16,Mathematics for the Biological Sciences,,TTh,3:30P - 4:20P,,,,1,0.5,0.3333,0.3333,0.3333
+MATH:1440:0A17,Mathematics for the Biological Sciences,,TTh,5:00P - 5:50P,,,"66, TA",1,0.5,0.3333,0.3333,0.3333
+MATH:1440:0A20,Mathematics for the Biological Sciences,,TTh,2:00P - 2:50P,,,,1,0.5,0.3333,0.3333,0.3333
+MATH:1440:0A22,Mathematics for the Biological Sciences,,TTh,9:30A - 10:20A,,,,1,0.5,0.3333,0.3333,0.3333
+MATH:1460:000A,Calculus for the Biological Sciences,Instructors:Xiaoyi Zhang(Primary Instructor),MWF,1:30P - 2:20P,,,,0,0.5,0.3333,0.3333,0.3333
+MATH:1460:000B,Calculus for the Biological Sciences,Instructors:Xiaoyi Zhang(Primary Instructor),MWF,2:30P - 3:20P,,,,0,0.5,0.3333,0.3333,0.3333
+MATH:1460:0071,Calculus for the Biological Sciences,,TTh,2:00P - 2:50P,,,,1,0.5,0.3333,0.3333,0.3333
+MATH:1460:0081,Calculus for the Biological Sciences,,TTh,8:30A - 9:20A,,,,1,0.5,0.3333,0.3333,0.3333
+MATH:1460:0082,Calculus for the Biological Sciences,,TTh,8:30A - 9:20A,,,,1,0.5,0.3333,0.3333,0.3333
+MATH:1460:0091,Calculus for the Biological Sciences,,TTh,9:30A - 10:20A,,,,1,0.5,0.3333,0.3333,0.3333
+MATH:1460:0101,Calculus for the Biological Sciences,,TTh,7:30A - 8:20A,,,,1,0.5,0.3333,0.3333,0.3333
+MATH:1460:0121,Calculus for the Biological Sciences,,TTh,9:30A - 10:20A,,,,1,0.5,0.3333,0.3333,0.3333
+MATH:1460:0122,Calculus for the Biological Sciences,,TTh,12:30P - 1:20P,,,,1,0.5,0.3333,0.3333,0.3333
+MATH:1460:0131,Calculus for the Biological Sciences,,TTh,5:00P - 5:50P,,,,1,0.5,0.3333,0.3333,0.3333
+MATH:1460:0132,Calculus for the Biological Sciences,,TTh,5:00P - 5:50P,,,,1,0.5,0.3333,0.3333,0.3333
+MATH:1460:0231,Calculus for the Biological Sciences,,TTh,12:30P - 1:20P,,,,1,0.5,0.3333,0.3333,0.3333
+MATH:1460:0331,Calculus for the Biological Sciences,,TTh,3:30P - 4:20P,,,,1,0.5,0.3333,0.3333,0.3333
+MATH:1460:0332,Calculus for the Biological Sciences,,TTh,3:30P - 4:20P,,,,1,0.5,0.3333,0.3333,0.3333
+MATH:1460:0431,Calculus for the Biological Sciences,,TTh,2:00P - 2:50P,,,,1,0.5,0.3333,0.3333,0.3333
+MATH:1460:0432,Calculus for the Biological Sciences,,TTh,5:00P - 5:50P,,,,1,0.5,0.3333,0.3333,0.3333
+MATH:1550:000A,Engineer Math I Single Variable Calculus,Instructors:Cynthia Farthing(Primary Instructor),MWF,10:30A - 11:20A,,,,0,0.5,0.3333,0.3333,0.3333
+MATH:1550:000B,Engineer Math I Single Variable Calculus,Instructors:Cynthia Farthing(Primary Instructor),MWF,12:30P - 1:20P,,,,0,0.5,0.3333,0.3333,0.3333
+MATH:1550:0071,Engineer Math I Single Variable Calculus,,TTh,7:30A - 8:20A,,,,1,0.5,0.3333,0.3333,0.3333
+MATH:1550:0082,Engineer Math I Single Variable Calculus,,TTh,8:30A - 9:20A,,,,1,0.5,0.3333,0.3333,0.3333
+MATH:1550:0083,Engineer Math I Single Variable Calculus,,TTh,8:30A - 9:20A,,,,1,0.5,0.3333,0.3333,0.3333
+MATH:1550:0091,Engineer Math I Single Variable Calculus,,TTh,9:30A - 10:20A,,,,1,0.5,0.3333,0.3333,0.3333
+MATH:1550:0111,Engineer Math I Single Variable Calculus,,TTh,5:00P - 5:50P,,,,1,0.5,0.3333,0.3333,0.3333
+MATH:1550:0112,Engineer Math I Single Variable Calculus,,TTh,11:00A - 11:50A,,,,1,0.5,0.3333,0.3333,0.3333
+MATH:1550:0131,Engineer Math I Single Variable Calculus,,TTh,12:30P - 1:20P,,,,1,0.5,0.3333,0.3333,0.3333
+MATH:1550:0132,Engineer Math I Single Variable Calculus,,TTh,12:30P - 1:20P,,,,1,0.5,0.3333,0.3333,0.3333
+MATH:1550:0134,Engineer Math I Single Variable Calculus,,TTh,2:00P - 2:50P,,,,1,0.5,0.3333,0.3333,0.3333
+MATH:1550:0135,Engineer Math I Single Variable Calculus,,TTh,2:00P - 2:50P,,,,1,0.5,0.3333,0.3333,0.3333
+MATH:1550:0331,Engineer Math I Single Variable Calculus,,TTh,3:30P - 4:20P,,,,1,0.5,0.3333,0.3333,0.3333
+MATH:1560:0AAA,Engineer Math II: Multivariable Calculus,Instructors:Walter Seaman(Primary Instructor),MWF,12:30P - 1:20P,,,,0,0.5,0.5,0.5,0.3333
+MATH:1560:0A01,Engineer Math II: Multivariable Calculus,Instructors:Walter Seaman(Course Supervisor),TTh,2:30P - 3:20P,,,,1,0.5,0.5,0.5,0.3333
+MATH:1560:0A03,Engineer Math II: Multivariable Calculus,Instructors:Walter Seaman(Course Supervisor),TTh,12:30P - 1:20P,,,"42, TA",1,0.5,0.5,0.5,0.3333
+MATH:1560:0A04,Engineer Math II: Multivariable Calculus,Instructors:Walter Seaman(Course Supervisor),TTh,9:30A - 10:20A,,,"42, TA",1,0.5,0.5,0.5,0.3333
+MATH:1560:0A05,Engineer Math II: Multivariable Calculus,Instructors:Walter Seaman(Course Supervisor),TTh,1:30P - 2:20P,,,,1,0.5,0.5,0.5,0.3333
+MATH:1560:0A07,Engineer Math II: Multivariable Calculus,Instructors:Walter Seaman(Course Supervisor),TTh,11:30A - 12:20P,,,,1,0.5,0.5,0.5,0.3333
+MATH:1560:0A09,Engineer Math II: Multivariable Calculus,Instructors:Walter Seaman(Course Supervisor),TTh,8:30A - 9:20A,,,,1,0.5,0.5,0.5,0.3333
+MATH:1850:0CCC,Calculus I,Instructors:Richard Baker(Primary Instructor),MWF,2:30P - 3:20P,,,,0,0.5,0.5,0.5,0.3333
+MATH:1850:0C07,Calculus I,,TTh,8:30A - 9:20A,,,,1,0.5,0.5,0.5,0.3333
+MATH:1850:0C08,Calculus I,,TTh,9:30A - 10:20A,,,,1,0.5,0.5,0.5,0.3333
+MATH:1850:0DDD,Calculus I,Instructors:Rodica Curtu(Primary Instructor),MWF,9:30A - 10:20A,,,,0,0.5,0.5,0.5,0.3333
+MATH:1850:0D09,Calculus I,,TTh,9:30A - 10:20A,,,"33, TA",1,0.5,0.5,0.5,0.3333
+MATH:1850:0D10,Calculus I,,TTh,5:00P - 5:50P,,,"33, TA",1,0.5,0.5,0.5,0.3333
+MATH:1850:0FFF,Calculus I,Instructors:Richard Baker(Primary Instructor),MWF,1:30P - 2:20P,,,,0,0.5,0.5,0.5,0.3333
+MATH:1850:0F12,Calculus I,,TTh,8:30A - 9:20A,,,,1,0.5,0.5,0.5,0.3333
+MATH:1850:0F14,Calculus I,,TTh,11:00A - 11:50A,,,,1,0.5,0.5,0.5,0.3333
+MATH:1850:0MMM,Calculus I,Instructors:Rodica Curtu(Primary Instructor),MWF,10:30A - 11:20A,,,,0,0.5,0.5,0.5,0.3333
+MATH:1850:0M30,Calculus I,,TTh,2:00P - 2:50P,,,"49, TA",1,0.5,0.5,0.5,0.3333
+MATH:1850:0M31,Calculus I,,TTh,3:30P - 4:20P,,,"49, TA",1,0.5,0.5,0.5,0.3333
+MATH:1860:0AAA,Calculus II,Instructors:Colleen Mitchell(Primary Instructor),MWF,8:30A - 9:20A,,,,0,0.5,0.5,0.5,0.3333
+MATH:1860:0A01,Calculus II,Instructors:Colleen Mitchell(Course Supervisor),TTh,9:30A - 10:20A,,,,1,0.5,0.5,0.5,0.3333
+MATH:1860:0A02,Calculus II,Instructors:Colleen Mitchell(Course Supervisor),TTh,5:00P - 5:50P,,,"18, TA",1,0.5,0.5,0.5,0.3333
+MATH:1860:0BBB,Calculus II,Instructors:Colleen Mitchell(Primary Instructor),MWF,9:30A - 10:20A,,,,0,0.5,0.5,0.5,0.3333
+MATH:1860:0B03,Calculus II,Instructors:Colleen Mitchell(Course Supervisor),TTh,9:30A - 10:20A,,,"18, TA",1,0.5,0.5,0.5,0.3333
+MATH:1860:0B04,Calculus II,Instructors:Colleen Mitchell(Course Supervisor),TTh,11:00A - 11:50A,,,,1,0.5,0.5,0.5,0.3333
+MATH:1860:0FFF,Calculus II,Instructors:Keiko Kawamuro(Primary Instructor),MWF,11:30A - 12:20P,,,,0,0.5,0.5,0.5,0.3333
+MATH:1860:0F10,Calculus II,Instructors:Keiko Kawamuro(Course Supervisor),TTh,12:30P - 1:20P,,,,1,0.5,0.5,0.5,0.3333
+MATH:1860:0F11,Calculus II,Instructors:Keiko Kawamuro(Course Supervisor),TTh,2:00P - 2:50P,,,,1,0.5,0.5,0.5,0.3333
+MATH:2550:0001,Engineering Math III: Matrix Algebra,Instructors:Miodrag Iovanov(Primary Instructor),MW,12:30P - 1:20P,,,,0,1.0,1.0,0.5,0.5
+MATH:2550:0101,Engineering Math III: Matrix Algebra,Instructors:Miodrag Iovanov(Primary Instructor),MW,1:30P - 2:20P,,,,0,1.0,1.0,0.5,0.5
+MATH:2550:0121,Engineering Math III: Matrix Algebra,Instructors:Raul Curto(Primary Instructor),MW,11:30A - 12:20P,,,,0,1.0,1.0,0.5,0.5
+MATH:2560:0081,Engineer Math IV: Differential Equations,,MWF,12:30P - 1:20P,,,,0,1.0,1.0,0.5,0.5
+MATH:2560:0093,Engineer Math IV: Differential Equations,Instructors:Xueyu Zhu(Primary Instructor),MWF,9:30A - 10:20A,,,,0,1.0,1.0,0.5,0.5
+MATH:2560:0101,Engineer Math IV: Differential Equations,,MWF,11:30A - 12:20P,,,,0,1.0,1.0,0.5,0.5
+MATH:2560:0102,Engineer Math IV: Differential Equations,Instructors:Isabel Darcy(Primary Instructor),MWF,11:30A - 12:20P,,,,0,1.0,1.0,0.5,0.5
+MATH:2560:0103,Engineer Math IV: Differential Equations,Instructors:Isabel Darcy(Primary Instructor),MWF,8:30A - 9:20A,,,,0,1.0,1.0,0.5,0.5
+MATH:2560:0104,Engineer Math IV: Differential Equations,,MWF,10:30A - 11:20A,,,,0,1.0,1.0,0.5,0.5
+MATH:2560:0121,Engineer Math IV: Differential Equations,Instructors:Isabel Darcy(Primary Instructor),MWF,9:30A - 10:20A,,,,0,1.0,1.0,0.5,0.5
+MATH:2560:0131,Engineer Math IV: Differential Equations,Instructors:Olga Sokratova(Primary Instructor),MWF,2:30P - 3:20P,,,,0,1.0,1.0,0.5,0.5
+MATH:2560:0132,Engineer Math IV: Differential Equations,Instructors:Olga Sokratova(Primary Instructor),MWF,1:30P - 2:20P,,,,0,1.0,1.0,0.5,0.5
+MATH:2700:0101,Introduction to Linear Algebra,Instructors:David Stewart(Primary Instructor),MWThF,4:30P - 5:20P,,,,0,1.0,1.0,0.5,0.5
+MATH:2700:0111,Introduction to Linear Algebra,Instructors:David Stewart(Primary Instructor),MWThF,1:30P - 2:20P,,,,0,1.0,1.0,0.5,0.5
+MATH:2700:0112,Introduction to Linear Algebra,Instructors:David Stewart(Primary Instructor),MWThF,2:30P - 3:20P,,,,0,1.0,1.0,0.5,0.5
+MATH:2850:0091,Calculus III,Instructors:Oguz Durumeric(Primary Instructor),MWThF,9:30A - 10:20A,,,,0,1.0,1.0,0.5,0.5
+MATH:2850:0101,Calculus III,Instructors:Oguz Durumeric(Primary Instructor),MWThF,10:30A - 11:20A,,,,0,1.0,1.0,0.5,0.5
+MATH:3550:0102,Engineering Math V: Vector Calculus,Instructors:Bruce Ayati(Primary Instructor),MWF,10:30A - 11:20A,,,,0,1.0,1.0,0.5,0.5
+MATH:3550:0121,Engineering Math V: Vector Calculus,Instructors:Tong Li(Primary Instructor),MWF,11:30A - 12:20P,,,,0,1.0,1.0,0.5,0.5
+MATH:3550:0231,Engineering Math V: Vector Calculus,Instructors:Tong Li(Primary Instructor),MWF,12:30P - 1:20P,,,,0,1.0,1.0,0.5,0.5
+MATH:3600:0001,Intro to Ordinary Differential Equations,Instructors:Yangyang Wang(Primary Instructor),MWF,2:30P - 3:20P,,,,0,1.0,1.0,0.5,0.5
+MATH:3720:0BBB,Introduction to Abstract Algebra I,Instructors:Yangbo Ye(Primary Instructor),MWF,12:30P - 1:20P,,,,0,1.0,1.0,0.5,0.5
+MATH:3720:0B03,Introduction to Abstract Algebra I,Instructors:Yangbo Ye(Course Supervisor),Th,12:30P - 1:20P,,,"24, TA",1,1.0,1.0,0.5,0.5
+MATH:3720:0B04,Introduction to Abstract Algebra I,Instructors:Yangbo Ye(Course Supervisor),Th,5:00P - 5:50P,,,"24, TA",1,1.0,1.0,0.5,0.5
+MATH:3750:0001,Classical Analysis,Instructors:Oguz Durumeric(Primary Instructor),MWThF,10:30A - 11:20A,,,,0,1.0,1.0,0.5,0.5
+MATH:3750:0002,Classical Analysis,Instructors:Oguz Durumeric(Primary Instructor),MWThF,9:30A - 10:20A,,,,0,1.0,1.0,0.5,0.5
+MATH:3770:0CCC,Fundamental Properties Spaces/Funct  I,Instructors:Lihe Wang(Primary Instructor),MWF,1:30P - 2:20P,,,,0,1.0,1.0,0.5,0.5
+MATH:3770:0C03/MATH:4010:0A01,Fundamental Properties Spaces/Funct  I/Basic Analysis,,Th,2:00P - 2:50P,,,"53, TA",1,1.0,1.0,0.5,0.5
+MATH:3770:0C06,Fundamental Properties Spaces/Funct  I,,Th,12:30P - 1:20P,,,"53, TA",1,1.0,1.0,0.5,0.5
+MATH:3800:0003,Introduction to Numerical Methods,Instructors:Laurent Jay(Primary Instructor),MWF,10:30A - 11:20A,,,,0,1.0,1.0,0.5,0.5
+MATH:3800:0004,Introduction to Numerical Methods,Instructors:Laurent Jay(Primary Instructor),MWF,11:30A - 12:20P,,,,0,1.0,1.0,0.5,0.5
+MATH:3996:0IND,Individual Study & Honors in Mathematics,,,,,,,0,1.0,1.0,0.5,0.5
+MATH:3997:0IND,Readings in Mathematics,,,,,,,0,1.0,1.0,0.5,0.5
+MATH:4010:0AAA,Basic Analysis,Instructors:Lihe Wang(Primary Instructor),MWF,1:30P - 2:20P,,,,0,1.0,1.0,0.5,0.5
+MATH:4010:0A01,Basic Analysis,,Th,2:00P - 2:50P,,,,0,1.0,1.0,0.5,0.5
+MATH:4020:0BBB,Basic Abstract Algebra,Instructors:Yangbo Ye(Primary Instructor),MWF,12:30P - 1:20P,,,,0,1.0,1.0,0.5,0.5
+MATH:4020:0B03,Basic Abstract Algebra,Instructors:Yangbo Ye(Course Supervisor),Th,12:30P - 1:20P,,,,0,1.0,1.0,0.5,0.5
+MATH:4050:0001,Introduction to Discrete Mathematics,Instructors:Olga Sokratova(Primary Instructor),MWF,10:30A - 11:20A,,,,0,1.0,1.0,0.5,0.5
+MATH:4090:0AAA,A Rigorous Intro to Abstract Algebra,Instructors:Ryan Kinser(Primary Instructor),MWF,11:30A - 12:20P,,,,0,1.0,1.0,0.5,0.5
+MATH:4090:0A01,A Rigorous Intro to Abstract Algebra,Instructors:Ryan Kinser(Course Supervisor),T,11:00A - 11:50A,,,,0,1.0,1.0,0.5,0.5
+MATH:4200:0001,Complex Variables,Instructors:Hao Fang(Primary Instructor),MWF,9:30A - 10:20A,,,,0,1.0,1.0,0.5,0.5
+MATH:4250:0001,Introduction to Financial Mathematics,Instructors:Palle Jorgensen(Primary Instructor),MWF,3:30P - 4:20P,,,,0,1.0,1.0,0.5,0.5
+MATH:5000:0AAA,Abstract Algebra I,Instructors:Ryan Kinser(Primary Instructor),MWF,11:30A - 12:20P,,,,0,1.0,1.0,1.0,0.5
+MATH:5000:0A01/MATH:4090:0A01,Abstract Algebra I/A Rigorous Intro to Abstract Algebra,Instructors:Ryan Kinser(Course Supervisor),T,11:00A - 11:50A,,,"01, TA",1,1.0,1.0,1.0,0.5
+MATH:5200:0AAA,Introduction to Analysis I,Instructors:Raul Curto(Primary Instructor),MWF,2:30P - 3:20P,,,,0,1.0,1.0,1.0,0.5
+MATH:5200:0A01,Introduction to Analysis I,,Th,8:30A - 9:20A,,,"16, TA",1,1.0,1.0,1.0,0.5
+MATH:5400:0AAA,Fundamental Groups and Covering Spaces,Instructors:Keiko Kawamuro(Primary Instructor),MWF,10:30A - 11:20A,,,,0,1.0,1.0,1.0,0.5
+MATH:5400:0A01,Fundamental Groups and Covering Spaces,,Th,11:00A - 11:50A,,,"32, TA",1,1.0,1.0,1.0,0.5
+MATH:5600:0AAA,Nonlinear Dynamics with Numerical Methds,Instructors:Yangyang Wang(Primary Instructor),MWF,1:30P - 2:20P,,,,0,1.0,1.0,1.0,0.5
+MATH:5600:0A01,Nonlinear Dynamics with Numerical Methds,Instructors:Yangyang Wang(Course Supervisor),T,2:00P - 2:50P,,,"34, TA",1,1.0,1.0,1.0,0.5
+MATH:5750:0AAA,Mathematical Biology I,"Instructors:Rodica Curtu(Primary Instructor),Colleen Mitchell(Team Teacher),Yangyang Wang(Team Teacher)",MWF,12:30P - 1:20P,,,,0,1.0,1.0,1.0,0.5
+MATH:5750:0A01,Mathematical Biology I,"Instructors:Rodica Curtu(Course Supervisor),Colleen Mitchell(Course Supervisor),Yangyang Wang(Course Supervisor)",Th,9:30A - 10:20A,,,"34, TA",1,1.0,1.0,1.0,0.5
+MATH:5800:0AAA,Numerical Methods I,Instructors:Bruce Ayati(Primary Instructor),MWF,9:30A - 10:20A,,,,0,1.0,1.0,1.0,0.5
+MATH:5800:0A01,Numerical Methods I,Instructors:Bruce Ayati(Course Supervisor),T,9:30A - 10:20A,,,"19, TA",1,1.0,1.0,1.0,0.5
+MATH:5900:0001,First-Year Graduate Seminar,Instructors:Ryan Kinser(Primary Instructor),F,3:30P - 4:20P,,,,0,1.0,1.0,1.0,0.5
+MATH:6000:0001,Categories and Modules,Instructors:Frauke Bleher(Primary Instructor),TTh,12:30P - 1:45P,,,,0,1.0,1.0,1.0,1.0
+MATH:6200:0001,Analysis I,Instructors:Palle Jorgensen(Primary Instructor),MWF,2:30P - 3:20P,,,,0,1.0,1.0,1.0,1.0
+MATH:6400:0001,Algebraic Topology,Instructors:Mohammad Farajzadeh Tehrani(Primary Instructor),MWF,11:30A - 12:20P,,,,0,1.0,1.0,1.0,1.0
+MATH:6500:0001,Differential Geometry I,Instructors:Hao Fang(Primary Instructor),MWF,10:30A - 11:20A,,,,0,1.0,1.0,1.0,1.0
+MATH:6700:0001,Partial Differential Equations I,Instructors:Lihe Wang(Primary Instructor),MWF,10:30A - 11:20A,,,,0,1.0,1.0,1.0,1.0
+MATH:7030:0001,Topics in Algebra,Instructors:Frauke Bleher(Primary Instructor),TTh,11:00A - 12:15P,,,,0,1.0,1.0,1.0,1.0
+MATH:7070:0001,Seminar: Algebra,,M,3:30P - 4:20P,,,,0,1.0,1.0,1.0,1.0
+MATH:7090:0001,Seminar: Representation Theory,"Instructors:Muthu Krishnamurthy(Primary Instructor),Yangbo Ye(Team Teacher)",,,,,,0,1.0,1.0,1.0,1.0
+MATH:7200:0001,Functional Analysis I,Instructors:Ionut Chifan(Primary Instructor),TTh,9:30A - 10:45A,,,,0,1.0,1.0,1.0,1.0
+MATH:7290:0001,Seminar: Operator Theory,"Instructors:Richard Baker(Primary Instructor),Sergii Bezuglyi(Team Teacher),Ionut Chifan(Team Teacher)more...",T,1:30P - 2:20P,,,,0,1.0,1.0,1.0,1.0
+MATH:7400:0001,Current Geometry and Topology I,,MWF,12:30P - 1:20P,,,,0,1.0,1.0,1.0,1.0
+MATH:7470:0001,Seminar: Topology,"Instructors:Ben Cooper(Primary Instructor),Isabel Darcy(Team Teacher),Mohammad Farajzadeh Tehrani(Team Teacher)more...",TTh,2:00P - 3:15P,,,,0,1.0,1.0,1.0,1.0
+MATH:7570:0001,Seminar: Differential Geometry,"Instructors:Oguz Durumeric(Primary Instructor),Hao Fang(Team Teacher),Mohammad Farajzadeh Tehrani(Team Teacher)more...",,,,,,0,1.0,1.0,1.0,1.0
+MATH:7580:0001,Seminar: Mathematical Physics,Instructors:Palle Jorgensen(Primary Instructor),T,2:30P - 3:20P,,,,0,1.0,1.0,1.0,1.0
+MATH:7670:0001,Seminar: Mathematical Biology,"Instructors:Zahra Aminzare(Primary Instructor),Bruce Ayati(Team Teacher),Rodica Curtu(Team Teacher)more...",M,3:30P - 4:20P,,,,0,1.0,1.0,1.0,1.0
+MATH:7770:0001,Seminar: Partial Differential Equations,"Instructors:Tong Li(Primary Instructor),Colleen Mitchell(Team Teacher),Lihe Wang(Team Teacher)more...",W,3:30P - 5:20P,,,,0,1.0,1.0,1.0,1.0
+MATH:7830:0001,Topics in Applied Mathematics,Instructors:Xueyu Zhu(Primary Instructor),MWF,10:30A - 11:20A,,,,0,1.0,1.0,1.0,1.0
+MATH:7870:0001,Seminar: Numerical Analysis,"Instructors:Bruce Ayati(Primary Instructor),Weimin Han(Team Teacher),Laurent Jay(Team Teacher)more...",T,11:00A - 11:50A,,,,0,1.0,1.0,1.0,1.0
+MATH:7990:0IND,Reading Research,,,,,,,0,1.0,1.0,1.0,1.0

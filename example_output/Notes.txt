@@ -1,0 +1,32 @@
+TA 39 is missing as they were originally not part of the TA list.
+This is intentionally kept to check the "survey taken but TA not found" feature of the UI.
+
+There are also duplicates and TAs that did not fill out the survey, as shown in the raw data.
+These should appear when "alphabetizing" TAs.
+
+For this test case, the following was done:
+
+- TA 90+ was removed
+- TA by itself and TA 44 was removed as these represent survey submissions sent with errors.
+
+- Follow the ta_needed entry from course_dataset, as the default selections change when
+	an instructor is assigned.
+
+The following TA and courses were set manually:
+
+TA 66 to 1440 A09 and A17
+TA 42 to 1560 A03 and A04
+TA 33 to 1850 D09 and D10
+TA 49 to 1850 M30 and M31
+TA 18 to 1860 A02 and B03
+TA 24 to 3720 (both secs)
+TA 53 to 3770 (both secs)
+TA 01 to 5000
+TA 16 to 5200
+TA 32 to 5400
+TA 34 to 5600 and 5750
+TA 19 to 5800
+
+TAs 62, 63, and 69 were intentionally left unassigned.
+
+A Moderate load was selected for the results.

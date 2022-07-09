@@ -1,0 +1,14 @@
+To do:
+
+- Change Q1 in survey from "Full Name" to Q1: "Last Name", Q2: "First Name"
+- Add prompt in survey that first years will likely not get standalone and 5000 level courses.
+- Remind TAs to know schedule first, then fill out survey. If not known put in all possible courses.
+- (maybe) add location to course web-scraping to check whether two courses have same day/time/location
+	implying they are the same discussion
+	- for now, prompt user to uncheck such duplicate discussions in Readme file or at this step.
+- Give overview of how algorithm works, including workload and time vs. course preferences, and link it
+	at the start of the survey.
+- Change "do you care more about time vs course preferences?" to a 0 to 1 or equivalent scale, for more 
+	exact weighting.
+- Add customization to course preferences / time preferences e.g. TAs assigning their own weights.
+- Add 3770/4010 and 4090/5000 as same course in survey
