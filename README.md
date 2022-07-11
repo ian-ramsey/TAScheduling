@@ -91,7 +91,9 @@ For Gurobi, also run "]" -> "build Gurobi"
 
 Download TAScheduling by either 
 * downloading the zip file and unzipping where you want it on your personal computer
+
 OR
+
 * in your terminal, move to the directory where you want it and run:
 "git clone https://github.com/mkratochvil/TAScheduling.git"
 
@@ -99,10 +101,8 @@ OR
 ## Usage
 
 Make sure you have downloaded the survey results from Qualtrics.
-	- From the Qualtrics page, go to 
-		Data & Analysis -> Export & Import -> Export Data...
-		- Then download data as a CSV with "Download all fields" checked and
-			"Use choice text" selected.
+* From the Qualtrics page, go to Data & Analysis -> Export & Import -> Export Data...
+	- Then download data as a CSV with "Download all fields" checked and "Use choice text" selected.
 
 To start the TAScheduling package, run the command in your terminal:
 
@@ -130,34 +130,35 @@ the process over.
 If a TA is not on the list, a warning will appear. Check these in a case-by-case basis, and plan accordingly.
 In this case, they will appear at the BOTTOM of the list of TAs to be marked for removal.
 There are several possibilities for why a TA does not appear:
-	- A graduate student filled out the survey but is not a TA this semester.
-	- A TA has a typo in their last name.
-	- There could be a bug in the software (TAs are sorted based on whether the listed last name appears).
+
+* A graduate student filled out the survey but is not a TA this semester.
+* A TA has a typo in their last name.
+* There could be a bug in the software (TAs are sorted based on whether the listed last name appears).
 
 If a TA is marked as taking a survey multiple times, there could be several reasons for this:
-	- The TA took the survey multiple times...their responses are stored in the order they took the survey
+* The TA took the survey multiple times...their responses are stored in the order they took the survey
 		with the first result not marked, while later results marked with the number of the reply.
-	- There could be a bug in the software (TAs are sorted based on whether the listed last name appears).
+* There could be a bug in the software (TAs are sorted based on whether the listed last name appears).
 
 If a TA is marked as not having taken the survey, there could be several reasons for this:
-	- This TA did not take the survey.
-	- A TA has a typo in their last name.
-	- There could be a bug in the software (TAs are sorted based on whether the listed last name appears).
+* This TA did not take the survey.
+* A TA has a typo in their last name.
+* There could be a bug in the software (TAs are sorted based on whether the listed last name appears).
 
 When entering the URLs, do the following:
-	- Go to myui.uiowa.edu -> COURSES / REGISTRATION
-	- Put in the correct Session (e.g. Fall 2022) under "Session"
-	- Under Course Subject, enter "MATH"
-	- Click the green "Search" button.
+* Go to myui.uiowa.edu -> COURSES / REGISTRATION
+* Put in the correct Session (e.g. Fall 2022) under "Session"
+* Under Course Subject, enter "MATH"
+* Click the green "Search" button.
 
 The URLs to be entered are the results for each of the pages.
 Make sure ALL math courses are entered, as we use 5000+ level math courses to help determine TAs' availability.
 Make sure these are entered in order, as well.
 
 The suggested courses (courses that are checked in the next screen) are based on:
-	- Course numbers that have historically been taught by TAs
-	- Whether or not an instructor has been assigned to this course.
-	- Whether this course is listed in the MyUI results INDEPENDENT of status.
+* Course numbers that have historically been taught by TAs
+* Whether or not an instructor has been assigned to this course.
+* Whether this course is listed in the MyUI results INDEPENDENT of status.
 
 Handling whether or not a course should be added or removed is on a case-by-case basis.
 We suggest following along with the MyUI listing when making these determinations. 
