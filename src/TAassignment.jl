@@ -1,5 +1,6 @@
 ## LOAD PACKAGES, SET DIRECTORY and GET OPTIMIZATION PARAMETERS
 using CSV, DataFrames
+
 opt_params = DataFrame(CSV.File("optimization_parameters.csv"));
 
 if "directory" in opt_params.parameter
@@ -197,16 +198,45 @@ for course in course_list
 end
 
 TA_course_codes = unique(code[TA_courses]);
+# Standalone courses offered
+standalone_course_codes = String[];
+if "MATH:0100" in TA_course_codes
+    push!(standalone_course_codes,"MATH:0100");
+end
+if "MATH:1005" in TA_course_codes
+    push!(standalone_course_codes,"MATH:1005");
+end
+if "MATH:1010" in TA_course_codes
+    push!(standalone_course_codes,"MATH:1010");
+end
+if "MATH:1020" in TA_course_codes
+    push!(standalone_course_codes,"MATH:1020");
+end
+# Light courses offered
+light_course_codes = String[];
+if "MATH:1350" in TA_course_codes
+    push!(light_course_codes,"MATH:1350");
+end
+if "MATH:1440" in TA_course_codes
+    push!(light_course_codes,"MATH:1440");
+end
+if "MATH:1460" in TA_course_codes
+    push!(light_course_codes,"MATH:1460");
+end
+if "MATH:1550" in TA_course_codes
+    push!(light_course_codes,"MATH:1550");
+end
+
 number_of_sections_of = Dict{String,Int64}()
 sections_of_course = Array{Int64,1}[];
 for course in TA_course_codes
     push!(number_of_sections_of, course => length(sections_of[course]));
     push!(sections_of_course, sections_of[course]);
 end
-number_of_sections_of_standalone = number_of_sections_of["MATH:0100"] +
-                                   number_of_sections_of["MATH:1005"] +
-                                   number_of_sections_of["MATH:1010"] +
-                                   number_of_sections_of["MATH:1020"];
+number_of_sections_of_standalone = 0;
+for course in standalone_course_codes
+    global number_of_sections_of_standalone += number_of_sections_of[course];
+end
 n_course = length(TA_course_codes);  # number of courses
 
 # Same courses
@@ -265,19 +295,19 @@ end
 n_subgroup = length(subgroup);
 
 # Standalone courses
-standalone_courses = union(sections_of["MATH:0100"],
-                           sections_of["MATH:1005"],
-                           sections_of["MATH:1010"],
-                           sections_of["MATH:1020"]);
+standalone_courses = Int[];
+for course in standalone_course_codes
+    append!(standalone_courses, sections_of[course]);
+end
 
 # Light courses (1350, 1440, 1460, 1550) for 1st-year students
-light_courses = union(sections_of["MATH:1350"],
-                      sections_of["MATH:1440"],
-                      sections_of["MATH:1460"],
-                      sections_of["MATH:1550"]);
+light_courses = Int[];
+for course in light_course_codes
+    append!(light_courses, sections_of[course]);
+end
 
 # Hard courses (3000 and higher, and standalone courses)
-hard_course_codes = ["MATH:0100","MATH:1005","MATH:1010","MATH:1020"];
+hard_course_codes = copy(standalone_course_codes);
 append!(hard_course_codes, unique(code[findall("MATH:3000" .<= code)]));
 
 hard_courses = Int[];
@@ -508,7 +538,6 @@ for j = 1:m
     end
 end
 
-
 # Availability of TA j for course k: [j,k]
 A = zeros(Bool,m,n);
 for j = 1:m
@@ -517,11 +546,6 @@ for j = 1:m
     end
 end
 
-#=
-for j = 1:m
-    println(available_first[j,:,:] == available_second[j,:,:])
-end
-=#
 
 ## CONSTRUCT THE MODEL
 using JuMP, Gurobi, Statistics
@@ -648,6 +672,10 @@ for j in first_year_TAs
         @constraint(model, x[j,k] == 0);
     end
 end
+# Every TA must teach a course
+#for j = 1:m
+#    @constraint(model, sum(x[j,k] for k=1:n) >= 1);
+#end
 
 status = optimize!(model);
 # Print results
@@ -699,102 +727,3 @@ CSV.write("course_output.csv",course_dataset)
 assignment[TA] = TA_result;
 TA_dataset.assignment = assignment;
 CSV.write("TA_output.csv",TA_dataset)
-
-
-## PERFORMANCE EVALUATION
-#=
-prefer(j,k) = findfirst(code[TA_courses[k]] .== course_pref[j,:]);
-course_pref_result = Matrix{Union{String,Int}}(undef,m,3);
-for j = 1:m
-    i = 1;
-    for k = 1:n
-        if value(x[j,k]) > 0.99
-            if code[TA_courses[k]] in course_pref[j,:]
-                course_pref_result[j,i] = prefer(j,k);
-            else
-                course_pref_result[j,i] = "not prefered";
-            end
-            i += 1;
-        end
-    end
-    if i <= 3
-        course_pref_result[j,i:3] .= "n/a";
-    end
-end
-course_pref_result2 = zeros(Int,n);
-for k = 1:n
-    j = findfirst(value.(x[:,k]) .> 0.99);
-    if j == nothing
-        println("k=",k," j=",j);
-        break
-    end
-    if code[TA_courses[k]] in course_pref[j,:]
-        course_pref_result2[k] = prefer(j,k);
-    end
-end
-
-for i = 0:5
-    println("preference $i :",sum(course_pref_result2 .== i))
-end
-
-time_pref_result = Matrix{Union{String,Int}}(undef,m,3);
-for j = 1:m
-    i = 1;
-    for k = 1:n
-        if value(x[j,k]) > 0.99
-            if k in cluster[1]
-                time_pref_result[j,i] = time_pref_early_morning[j];
-            elseif k in cluster[2]
-                time_pref_result[j,i] = time_pref_morning[j];
-            elseif k in cluster[3]
-                time_pref_result[j,i] = time_pref_early_afternoon[j];
-            elseif k in cluster[4]
-                time_pref_result[j,i] = time_pref_afternoon[j];
-            elseif k in cluster[5]
-                time_pref_result[j,i] = time_pref_evening[j];
-            end
-            i += 1;
-        end
-    end
-    if i <= 3
-        time_pref_result[j,i:3] .= "n/a";
-    end
-end
-
-time_pref_result2 = zeros(Int,n);
-for k = 1:n
-    j = findfirst(value.(x[:,k]) .> 0.99);
-    if k in cluster[1]
-        time_pref_result2[k] = time_pref_early_morning[j];
-    elseif k in cluster[2]
-        time_pref_result2[k] = time_pref_morning[j];
-    elseif k in cluster[3]
-        time_pref_result2[k] = time_pref_early_afternoon[j];
-    elseif k in cluster[4]
-        time_pref_result2[k] = time_pref_afternoon[j];
-    elseif k in cluster[5]
-        time_pref_result2[k] = time_pref_evening[j];
-    end
-end
-for i = 1:5
-    println("preference $i :",sum(time_pref_result2 .== i))
-end
-
-# TA Satisfaction
-TA_satisfaction = zeros(m);
-for j = 1:m
-    course_sat = Int[];
-    time_sat = Int[];
-    for k = 1:n
-        if value(x[j,k]) == 1
-            if course_pref_result2[k] == 0
-                append!(course_sat, 10);
-            else
-                append!(course_sat, course_pref_result2[k]);
-            end
-            append!(time_sat, time_pref_result2[k]);
-        end
-    end
-    TA_satisfaction[j] = λ[j]*mean(course_sat) + (1-λ[j])*mean(time_sat);
-end
-=#
