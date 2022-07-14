@@ -298,9 +298,9 @@ for c = 1:n_codes
     course = TA_course_codes[c];
     J = findall(courses_requested[c,:] .> 0);
     rank = courses_requested[c,J];
-    if length(J) == 0
-        continue
-    end
+#    if length(J) == 0
+#        continue
+#    end
     for k in sections_of[course]
         # List TAs preferring the course
         for i = 1:length(J)
