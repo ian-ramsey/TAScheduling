@@ -55,14 +55,14 @@ In particular, once you have navigated to your license key
 (something like ab01c234-567d-89ef-gh01-2345ij67890)
 enter the following command in the terminal:
 
-grbgetkey <license key>
+grbgetkey [license key]
 
 
 ## Installing needed Python Modules and Julia Packages
 
 ### Python
 
-In the command line install the following modules using "pip install <module>"
+In the command line install the following modules using "pip install [module]"
 
 modules: pandas, numpy, julia, bs4, requests
 
@@ -80,7 +80,7 @@ In the command line, start julia by typing in "julia"
 
 Then in the REPL, hit "]" to start Julia's Package Manager.
 
-Install the following packages using "add <package>"
+Install the following packages using "add [package]"
 
 packages: DataFrames, CSV, JuMP, Statistics, Gurobi.
 
@@ -106,7 +106,7 @@ Make sure you have downloaded the survey results from Qualtrics.
 
 To start the TAScheduling package, run the command in your terminal:
 
-python <path to TAScheduling>/TAScheduling/src/ta_assignment
+python [path to TAScheduling]/TAScheduling/src/ta_assignment
 
 The screen should now load.
 
