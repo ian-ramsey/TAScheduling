@@ -1,5 +1,5 @@
 course_number,course_name,course_supervisor(s),days1,times1,days2,times2,ta_assigned,ta_needed,workload_1,workload_2,workload_3,workload_4
-MATH:0100:0221,Basic Algebra I,Instructors:Cynthia Farthing(Course Supervisor),MWF,2:30P - 3:20P,,,,1,1.0,1.0,1.0,1.0
+MATH:0100:0221,Basic Algebra I,Instructors:Cynthia Farthing(Course Supervisor),MWF,2:30P - 3:20P,,,"01, TA",1,1.0,1.0,1.0,1.0
 MATH:0100:0331,Basic Algebra I,Instructors:Cynthia Farthing(Course Supervisor),MWF,3:30P - 4:20P,,,,1,1.0,1.0,1.0,1.0
 MATH:1005:0073,College Algebra,Instructors:Cynthia Farthing(Course Supervisor),MTWTh,7:30A - 8:20A,,,,1,1.0,1.0,1.0,1.0
 MATH:1005:0083,College Algebra,Instructors:Cynthia Farthing(Course Supervisor),MTWTh,8:30A - 9:20A,,,,1,1.0,1.0,1.0,1.0

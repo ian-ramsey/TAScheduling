@@ -18,7 +18,8 @@ else
 end
 
 ## DATA PROCESSING for COURSES
-course_dataset = DataFrame(CSV.File("course_dataset.csv"));
+course_dataset = DataFrame(CSV.File("course_dataset.csv"; truestrings=["true"],
+    falsestrings=["false"]));
 
 number = Array{String}(course_dataset[:,"course_number"]);
 course_name = Array{String}(course_dataset[:,"course_name"]);
@@ -212,6 +213,13 @@ end
 if "MATH:1020" in TA_course_codes
     push!(standalone_course_codes,"MATH:1020");
 end
+if "MATH:1120" in TA_course_codes
+    push!(standalone_course_codes,"MATH:1120");
+end
+if "MATH:1140" in TA_course_codes
+    push!(standalone_course_codes,"MATH:1140");
+end
+
 # Light courses offered
 light_course_codes = String[];
 if "MATH:1350" in TA_course_codes
@@ -272,12 +280,12 @@ TA_sections = section[TA_courses];
 for course in easy_courses
     I = findall((code .== course) .& (TA_needed .== false));  # old indexes of supervisors
     J = sections_of[course];  # new indexes of TAs
-    Sup = unique(supervisor[I]);
+    Sup = unique(skipmissing(supervisor[I]));
     if length(Sup) > 1
         for sup in Sup
             subJ = Int[];
             for i in I
-                if sup == supervisor[i]
+                if ismissing(supervisor[i]) ? false : sup == supervisor[i]
                     for s = section[i]
                         if isletter(s)
                             j = intersect(J,findall(occursin.(s,TA_sections)));
@@ -644,8 +652,12 @@ for k = 1:n
 end
 for j = 1:m
     # No TA can be overloaded
-    @constraint(model, sum(w[k]*x[j,k] for k=1:n) <= 1);
+    @constraint(model, 0.25 <= sum(w[k]*x[j,k] for k=1:n) <= 1);
 end
+# The following TAs will get one discussion session to teach
+#for j in [8, 15, 17, 23, 31, 33, 35]
+#    @constraint(model, sum(w[k]*x[j,k] for k=1:n) <= 0.5)
+#end
 for j = 1:m
     # Grouping
     for c = 1:n_course

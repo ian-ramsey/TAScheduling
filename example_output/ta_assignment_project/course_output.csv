@@ -1,29 +1,29 @@
 course_number,course_name,course_supervisor(s),days1,times1,days2,times2,ta_assigned,ta_needed,workload_1,workload_2,workload_3,workload_4
-MATH:0100:0221,Basic Algebra I,Instructors:Cynthia Farthing(Course Supervisor),MWF,2:30P - 3:20P,,,TA 39,1,1.0,1.0,1.0,1.0
-MATH:0100:0331,Basic Algebra I,Instructors:Cynthia Farthing(Course Supervisor),MWF,3:30P - 4:20P,,,"41, TA",1,1.0,1.0,1.0,1.0
-MATH:1005:0073,College Algebra,Instructors:Cynthia Farthing(Course Supervisor),MTWTh,7:30A - 8:20A,,,"17, TA",1,1.0,1.0,1.0,1.0
-MATH:1005:0083,College Algebra,Instructors:Cynthia Farthing(Course Supervisor),MTWTh,8:30A - 9:20A,,,"05, TA",1,1.0,1.0,1.0,1.0
+MATH:0100:0221,Basic Algebra I,Instructors:Cynthia Farthing(Course Supervisor),MWF,2:30P - 3:20P,,,"01, TA",1,1.0,1.0,1.0,1.0
+MATH:0100:0331,Basic Algebra I,Instructors:Cynthia Farthing(Course Supervisor),MWF,3:30P - 4:20P,,,"52, TA",1,1.0,1.0,1.0,1.0
+MATH:1005:0073,College Algebra,Instructors:Cynthia Farthing(Course Supervisor),MTWTh,7:30A - 8:20A,,,"05, TA",1,1.0,1.0,1.0,1.0
+MATH:1005:0083,College Algebra,Instructors:Cynthia Farthing(Course Supervisor),MTWTh,8:30A - 9:20A,,,"46, TA",1,1.0,1.0,1.0,1.0
 MATH:1005:0084,College Algebra,Instructors:Cynthia Farthing(Course Supervisor),MTWTh,4:30P - 5:20P,,,"14, TA",1,1.0,1.0,1.0,1.0
 MATH:1005:0091,College Algebra,Instructors:Cynthia Farthing(Course Supervisor),MTWTh,9:30A - 10:20A,,,"50, TA",1,1.0,1.0,1.0,1.0
-MATH:1005:0101,College Algebra,Instructors:Cynthia Farthing(Course Supervisor),MTWTh,1:30P - 2:20P,,,"48, TA",1,1.0,1.0,1.0,1.0
-MATH:1005:0111,College Algebra,Instructors:Cynthia Farthing(Course Supervisor),MTWTh,11:30A - 12:20P,,,"52, TA",1,1.0,1.0,1.0,1.0
-MATH:1005:0112,College Algebra,Instructors:Cynthia Farthing(Course Supervisor),MTWTh,10:30A - 11:20A,,,"29, TA",1,1.0,1.0,1.0,1.0
-MATH:1005:0121,College Algebra,Instructors:Cynthia Farthing(Course Supervisor),MTWTh,12:30P - 1:20P,,,"04, TA",1,1.0,1.0,1.0,1.0
-MATH:1005:0122,College Algebra,Instructors:Cynthia Farthing(Course Supervisor),MTWTh,3:30P - 4:20P,,,"22, TA",1,1.0,1.0,1.0,1.0
+MATH:1005:0101,College Algebra,Instructors:Cynthia Farthing(Course Supervisor),MTWTh,1:30P - 2:20P,,,"51, TA",1,1.0,1.0,1.0,1.0
+MATH:1005:0111,College Algebra,Instructors:Cynthia Farthing(Course Supervisor),MTWTh,11:30A - 12:20P,,,"36, TA",1,1.0,1.0,1.0,1.0
+MATH:1005:0112,College Algebra,Instructors:Cynthia Farthing(Course Supervisor),MTWTh,10:30A - 11:20A,,,"27, TA",1,1.0,1.0,1.0,1.0
+MATH:1005:0121,College Algebra,Instructors:Cynthia Farthing(Course Supervisor),MTWTh,12:30P - 1:20P,,,"15, TA",1,1.0,1.0,1.0,1.0
+MATH:1005:0122,College Algebra,Instructors:Cynthia Farthing(Course Supervisor),MTWTh,3:30P - 4:20P,,,"43, TA",1,1.0,1.0,1.0,1.0
 MATH:1005:0123,College Algebra,Instructors:Cynthia Farthing(Course Supervisor),MTWTh,8:30A - 9:20A,,,"45, TA",1,1.0,1.0,1.0,1.0
-MATH:1005:0124,College Algebra,Instructors:Cynthia Farthing(Course Supervisor),MTWTh,11:30A - 12:20P,,,"36, TA",1,1.0,1.0,1.0,1.0
+MATH:1005:0124,College Algebra,Instructors:Cynthia Farthing(Course Supervisor),MTWTh,11:30A - 12:20P,,,"48, TA",1,1.0,1.0,1.0,1.0
 MATH:1005:0231,College Algebra,Instructors:Cynthia Farthing(Primary Instructor),MTWTh,2:30P - 3:20P,,,,0,1.0,1.0,1.0,1.0
 MATH:1005:0232,College Algebra,Instructors:Cynthia Farthing(Course Supervisor),MTWTh,12:30P - 1:20P,,,"06, TA",1,1.0,1.0,1.0,1.0
-MATH:1005:0233,College Algebra,Instructors:Cynthia Farthing(Course Supervisor),MTWTh,1:30P - 2:20P,,,"51, TA",1,1.0,1.0,1.0,1.0
-MATH:1005:0331,College Algebra,Instructors:Cynthia Farthing(Course Supervisor),MTWTh,3:30P - 4:20P,,,"43, TA",1,1.0,1.0,1.0,1.0
+MATH:1005:0233,College Algebra,Instructors:Cynthia Farthing(Course Supervisor),MTWTh,1:30P - 2:20P,,,"13, TA",1,1.0,1.0,1.0,1.0
+MATH:1005:0331,College Algebra,Instructors:Cynthia Farthing(Course Supervisor),MTWTh,3:30P - 4:20P,,,"22, TA",1,1.0,1.0,1.0,1.0
 MATH:1005:0431,College Algebra,Instructors:Cynthia Farthing(Course Supervisor),MTWTh,11:30A - 12:20P,,,"20, TA",1,1.0,1.0,1.0,1.0
-MATH:1005:0433,College Algebra,Instructors:Cynthia Farthing(Course Supervisor),MTWTh,1:30P - 2:20P,,,"13, TA",1,1.0,1.0,1.0,1.0
-MATH:1005:0632,College Algebra,Instructors:Cynthia Farthing(Course Supervisor),MTWTh,2:30P - 3:20P,,,"12, TA",1,1.0,1.0,1.0,1.0
-MATH:1010:0231,Trigonometry,Instructors:Olga Sokratova(Course Supervisor),MWF,2:30P - 3:20P,,,"21, TA",1,1.0,1.0,1.0,1.0
-MATH:1010:0331,Trigonometry,Instructors:Olga Sokratova(Course Supervisor),MWF,3:30P - 4:20P,,,"02, TA",1,1.0,1.0,1.0,1.0
-MATH:1020:0081,Elementary Functions,Instructors:Olga Sokratova(Course Supervisor),MTWF,8:30A - 9:20A,,,"46, TA",1,1.0,1.0,1.0,1.0
-MATH:1020:0101,Elementary Functions,Instructors:Olga Sokratova(Course Supervisor),MTWF,10:30A - 11:20A,,,"27, TA",1,1.0,1.0,1.0,1.0
-MATH:1020:0331,Elementary Functions,Instructors:Olga Sokratova(Course Supervisor),MTWF,3:30P - 4:20P,,,"15, TA",1,1.0,1.0,1.0,1.0
+MATH:1005:0433,College Algebra,Instructors:Cynthia Farthing(Course Supervisor),MTWTh,1:30P - 2:20P,,,"44, TA (2)",1,1.0,1.0,1.0,1.0
+MATH:1005:0632,College Algebra,Instructors:Cynthia Farthing(Course Supervisor),MTWTh,2:30P - 3:20P,,,"21, TA",1,1.0,1.0,1.0,1.0
+MATH:1010:0231,Trigonometry,Instructors:Olga Sokratova(Course Supervisor),MWF,2:30P - 3:20P,,,TA 39,1,1.0,1.0,1.0,1.0
+MATH:1010:0331,Trigonometry,Instructors:Olga Sokratova(Course Supervisor),MWF,3:30P - 4:20P,,,"12, TA",1,1.0,1.0,1.0,1.0
+MATH:1020:0081,Elementary Functions,Instructors:Olga Sokratova(Course Supervisor),MTWF,8:30A - 9:20A,,,"17, TA",1,1.0,1.0,1.0,1.0
+MATH:1020:0101,Elementary Functions,Instructors:Olga Sokratova(Course Supervisor),MTWF,10:30A - 11:20A,,,"28, TA",1,1.0,1.0,1.0,1.0
+MATH:1020:0331,Elementary Functions,Instructors:Olga Sokratova(Course Supervisor),MTWF,3:30P - 4:20P,,,"41, TA",1,1.0,1.0,1.0,1.0
 MATH:1020:0631,Elementary Functions,Instructors:Olga Sokratova(Course Supervisor),TTh,6:30P - 8:20P,,,"07, TA",1,1.0,1.0,1.0,1.0
 MATH:1120:0AAA,Logic of Arithmetic,Instructors:Krishnendu Khan(Primary Instructor),MW,3:30P - 4:20P,,,,0,1.0,0.5,0.5,0.5
 MATH:1120:0A04,Logic of Arithmetic,Instructors:Krishnendu Khan(Course Supervisor),TTh,5:00P - 5:50P,,,,0,1.0,0.5,0.5,0.5
@@ -32,71 +32,71 @@ MATH:1340:0AAA,Mathematics for Business,,MWF,12:30P - 1:20P,,,,0,0.5,0.3333,0.33
 MATH:1340:0A06,Mathematics for Business,,TTh,9:30A - 10:20A,,,,0,0.5,0.3333,0.3333,0.3333
 MATH:1340:0A13,Mathematics for Business,,TTh,5:00P - 5:50P,,,,0,0.5,0.3333,0.3333,0.3333
 MATH:1350:0EXA,Quantitative Reasoning for Business,Instructors:Sergii Bezuglyi(Primary Instructor),MWF,2:30P - 3:20P,,,,0,0.5,0.3333,0.3333,0.3333
-MATH:1350:0A01,Quantitative Reasoning for Business,,TTh,8:30A - 9:20A,,,"31, TA",1,0.5,0.3333,0.3333,0.3333
+MATH:1350:0A01,Quantitative Reasoning for Business,,TTh,8:30A - 9:20A,,,"35, TA",1,0.5,0.3333,0.3333,0.3333
 MATH:1350:0A02,Quantitative Reasoning for Business,,TTh,9:30A - 10:20A,,,"54, TA",1,0.5,0.3333,0.3333,0.3333
-MATH:1350:0A03,Quantitative Reasoning for Business,,TTh,5:00P - 5:50P,,,"03, TA",1,0.5,0.3333,0.3333,0.3333
+MATH:1350:0A03,Quantitative Reasoning for Business,,TTh,5:00P - 5:50P,,,"64, TA",1,0.5,0.3333,0.3333,0.3333
 MATH:1350:0A04,Quantitative Reasoning for Business,,TTh,2:00P - 2:50P,,,"35, TA",1,0.5,0.3333,0.3333,0.3333
-MATH:1350:0A05,Quantitative Reasoning for Business,,TTh,11:00A - 11:50A,,,"31, TA",1,0.5,0.3333,0.3333,0.3333
-MATH:1350:0A07,Quantitative Reasoning for Business,,TTh,3:30P - 4:20P,,,"03, TA",1,0.5,0.3333,0.3333,0.3333
-MATH:1350:0A08,Quantitative Reasoning for Business,,TTh,5:00P - 5:50P,,,"54, TA",1,0.5,0.3333,0.3333,0.3333
-MATH:1350:0A09,Quantitative Reasoning for Business,,TTh,8:30A - 9:20A,,,"28, TA",1,0.5,0.3333,0.3333,0.3333
-MATH:1350:0A11,Quantitative Reasoning for Business,,TTh,11:00A - 11:50A,,,"28, TA",1,0.5,0.3333,0.3333,0.3333
-MATH:1350:0A12,Quantitative Reasoning for Business,,TTh,12:30P - 1:20P,,,"28, TA",1,0.5,0.3333,0.3333,0.3333
+MATH:1350:0A05,Quantitative Reasoning for Business,,TTh,11:00A - 11:50A,,,"35, TA",1,0.5,0.3333,0.3333,0.3333
+MATH:1350:0A07,Quantitative Reasoning for Business,,TTh,3:30P - 4:20P,,,"23, TA",1,0.5,0.3333,0.3333,0.3333
+MATH:1350:0A08,Quantitative Reasoning for Business,,TTh,5:00P - 5:50P,,,"55, TA",1,0.5,0.3333,0.3333,0.3333
+MATH:1350:0A09,Quantitative Reasoning for Business,,TTh,8:30A - 9:20A,,,"68, TA",1,0.5,0.3333,0.3333,0.3333
+MATH:1350:0A11,Quantitative Reasoning for Business,,TTh,11:00A - 11:50A,,,"58, TA",1,0.5,0.3333,0.3333,0.3333
+MATH:1350:0A12,Quantitative Reasoning for Business,,TTh,12:30P - 1:20P,,,"56, TA",1,0.5,0.3333,0.3333,0.3333
 MATH:1350:0A13,Quantitative Reasoning for Business,,TTh,2:00P - 2:50P,,,"23, TA",1,0.5,0.3333,0.3333,0.3333
-MATH:1350:0A27,Quantitative Reasoning for Business,,TTh,8:30A - 9:20A,,,"26, TA",1,0.5,0.3333,0.3333,0.3333
+MATH:1350:0A27,Quantitative Reasoning for Business,,TTh,8:30A - 9:20A,,,"23, TA",1,0.5,0.3333,0.3333,0.3333
 MATH:1350:0EXB,Quantitative Reasoning for Business,Instructors:Sergii Bezuglyi(Primary Instructor),MWF,1:30P - 2:20P,,,,0,0.5,0.3333,0.3333,0.3333
-MATH:1350:0B14,Quantitative Reasoning for Business,,TTh,8:30A - 9:20A,,,"35, TA",1,0.5,0.3333,0.3333,0.3333
-MATH:1350:0B15,Quantitative Reasoning for Business,,TTh,9:30A - 10:20A,,,"55, TA",1,0.5,0.3333,0.3333,0.3333
-MATH:1350:0B16,Quantitative Reasoning for Business,,TTh,11:00A - 11:50A,,,"59, TA",1,0.5,0.3333,0.3333,0.3333
-MATH:1350:0B17,Quantitative Reasoning for Business,,TTh,12:30P - 1:20P,,,"35, TA",1,0.5,0.3333,0.3333,0.3333
-MATH:1350:0B18,Quantitative Reasoning for Business,,TTh,2:00P - 2:50P,,,"03, TA",1,0.5,0.3333,0.3333,0.3333
-MATH:1350:0B19,Quantitative Reasoning for Business,,TTh,3:30P - 4:20P,,,"26, TA",1,0.5,0.3333,0.3333,0.3333
-MATH:1350:0B22,Quantitative Reasoning for Business,,TTh,9:30A - 10:20A,,,"26, TA",1,0.5,0.3333,0.3333,0.3333
-MATH:1350:0B23,Quantitative Reasoning for Business,,TTh,8:30A - 9:20A,,,"23, TA",1,0.5,0.3333,0.3333,0.3333
-MATH:1350:0B24,Quantitative Reasoning for Business,,TTh,12:30P - 1:20P,,,"31, TA",1,0.5,0.3333,0.3333,0.3333
-MATH:1350:0B25,Quantitative Reasoning for Business,,TTh,5:00P - 5:50P,,,"55, TA",1,0.5,0.3333,0.3333,0.3333
-MATH:1350:0B26,Quantitative Reasoning for Business,,TTh,3:30P - 4:20P,,,"23, TA",1,0.5,0.3333,0.3333,0.3333
-MATH:1350:0B28,Quantitative Reasoning for Business,,TTh,5:00P - 5:50P,,,"59, TA",1,0.5,0.3333,0.3333,0.3333
+MATH:1350:0B14,Quantitative Reasoning for Business,,TTh,8:30A - 9:20A,,,"26, TA",1,0.5,0.3333,0.3333,0.3333
+MATH:1350:0B15,Quantitative Reasoning for Business,,TTh,9:30A - 10:20A,,,"26, TA",1,0.5,0.3333,0.3333,0.3333
+MATH:1350:0B16,Quantitative Reasoning for Business,,TTh,11:00A - 11:50A,,,"31, TA",1,0.5,0.3333,0.3333,0.3333
+MATH:1350:0B17,Quantitative Reasoning for Business,,TTh,12:30P - 1:20P,,,"31, TA",1,0.5,0.3333,0.3333,0.3333
+MATH:1350:0B18,Quantitative Reasoning for Business,,TTh,2:00P - 2:50P,,,"64, TA",1,0.5,0.3333,0.3333,0.3333
+MATH:1350:0B19,Quantitative Reasoning for Business,,TTh,3:30P - 4:20P,,,"56, TA",1,0.5,0.3333,0.3333,0.3333
+MATH:1350:0B22,Quantitative Reasoning for Business,,TTh,9:30A - 10:20A,,,"55, TA",1,0.5,0.3333,0.3333,0.3333
+MATH:1350:0B23,Quantitative Reasoning for Business,,TTh,8:30A - 9:20A,,,"31, TA",1,0.5,0.3333,0.3333,0.3333
+MATH:1350:0B24,Quantitative Reasoning for Business,,TTh,12:30P - 1:20P,,,"58, TA",1,0.5,0.3333,0.3333,0.3333
+MATH:1350:0B25,Quantitative Reasoning for Business,,TTh,5:00P - 5:50P,,,"54, TA",1,0.5,0.3333,0.3333,0.3333
+MATH:1350:0B26,Quantitative Reasoning for Business,,TTh,3:30P - 4:20P,,,"26, TA",1,0.5,0.3333,0.3333,0.3333
+MATH:1350:0B28,Quantitative Reasoning for Business,,TTh,5:00P - 5:50P,,,"68, TA",1,0.5,0.3333,0.3333,0.3333
 MATH:1440:0EXA,Mathematics for the Biological Sciences,Instructors:Victor Camillo(Primary Instructor),MWF,10:30A - 11:20A,,,,0,0.5,0.3333,0.3333,0.3333
 MATH:1440:0A02,Mathematics for the Biological Sciences,,TTh,5:00P - 5:50P,,,"71, TA",1,0.5,0.3333,0.3333,0.3333
-MATH:1440:0A04,Mathematics for the Biological Sciences,,TTh,9:30A - 10:20A,,,"60, TA",1,0.5,0.3333,0.3333,0.3333
-MATH:1440:0A05,Mathematics for the Biological Sciences,,TTh,2:00P - 2:50P,,,"64, TA",1,0.5,0.3333,0.3333,0.3333
-MATH:1440:0A08,Mathematics for the Biological Sciences,,TTh,3:30P - 4:20P,,,"64, TA",1,0.5,0.3333,0.3333,0.3333
+MATH:1440:0A04,Mathematics for the Biological Sciences,,TTh,9:30A - 10:20A,,,"65, TA",1,0.5,0.3333,0.3333,0.3333
+MATH:1440:0A05,Mathematics for the Biological Sciences,,TTh,2:00P - 2:50P,,,"70, TA",1,0.5,0.3333,0.3333,0.3333
+MATH:1440:0A08,Mathematics for the Biological Sciences,,TTh,3:30P - 4:20P,,,"70, TA",1,0.5,0.3333,0.3333,0.3333
 MATH:1440:0A09,Mathematics for the Biological Sciences,,TTh,3:30P - 4:20P,,,"66, TA",1,0.5,0.3333,0.3333,0.3333
-MATH:1440:0A11,Mathematics for the Biological Sciences,,TTh,3:30P - 4:20P,,,"60, TA",1,0.5,0.3333,0.3333,0.3333
-MATH:1440:0A12,Mathematics for the Biological Sciences,,TTh,3:30P - 4:20P,,,"70, TA",1,0.5,0.3333,0.3333,0.3333
-MATH:1440:0A16,Mathematics for the Biological Sciences,,TTh,3:30P - 4:20P,,,"71, TA",1,0.5,0.3333,0.3333,0.3333
+MATH:1440:0A11,Mathematics for the Biological Sciences,,TTh,3:30P - 4:20P,,,"25, TA",1,0.5,0.3333,0.3333,0.3333
+MATH:1440:0A12,Mathematics for the Biological Sciences,,TTh,3:30P - 4:20P,,,"71, TA",1,0.5,0.3333,0.3333,0.3333
+MATH:1440:0A16,Mathematics for the Biological Sciences,,TTh,3:30P - 4:20P,,,"65, TA",1,0.5,0.3333,0.3333,0.3333
 MATH:1440:0A17,Mathematics for the Biological Sciences,,TTh,5:00P - 5:50P,,,"66, TA",1,0.5,0.3333,0.3333,0.3333
-MATH:1440:0A20,Mathematics for the Biological Sciences,,TTh,2:00P - 2:50P,,,"70, TA",1,0.5,0.3333,0.3333,0.3333
-MATH:1440:0A22,Mathematics for the Biological Sciences,,TTh,9:30A - 10:20A,,,"65, TA",1,0.5,0.3333,0.3333,0.3333
+MATH:1440:0A20,Mathematics for the Biological Sciences,,TTh,2:00P - 2:50P,,,"25, TA",1,0.5,0.3333,0.3333,0.3333
+MATH:1440:0A22,Mathematics for the Biological Sciences,,TTh,9:30A - 10:20A,,,"25, TA",1,0.5,0.3333,0.3333,0.3333
 MATH:1460:000A,Calculus for the Biological Sciences,Instructors:Xiaoyi Zhang(Primary Instructor),MWF,1:30P - 2:20P,,,,0,0.5,0.3333,0.3333,0.3333
 MATH:1460:000B,Calculus for the Biological Sciences,Instructors:Xiaoyi Zhang(Primary Instructor),MWF,2:30P - 3:20P,,,,0,0.5,0.3333,0.3333,0.3333
 MATH:1460:0071,Calculus for the Biological Sciences,,TTh,2:00P - 2:50P,,,"30, TA",1,0.5,0.3333,0.3333,0.3333
-MATH:1460:0081,Calculus for the Biological Sciences,,TTh,8:30A - 9:20A,,,"25, TA",1,0.5,0.3333,0.3333,0.3333
-MATH:1460:0082,Calculus for the Biological Sciences,,TTh,8:30A - 9:20A,,,"09, TA",1,0.5,0.3333,0.3333,0.3333
-MATH:1460:0091,Calculus for the Biological Sciences,,TTh,9:30A - 10:20A,,,"25, TA",1,0.5,0.3333,0.3333,0.3333
-MATH:1460:0101,Calculus for the Biological Sciences,,TTh,7:30A - 8:20A,,,"09, TA",1,0.5,0.3333,0.3333,0.3333
-MATH:1460:0121,Calculus for the Biological Sciences,,TTh,9:30A - 10:20A,,,"09, TA",1,0.5,0.3333,0.3333,0.3333
-MATH:1460:0122,Calculus for the Biological Sciences,,TTh,12:30P - 1:20P,,,"56, TA",1,0.5,0.3333,0.3333,0.3333
-MATH:1460:0131,Calculus for the Biological Sciences,,TTh,5:00P - 5:50P,,,"25, TA",1,0.5,0.3333,0.3333,0.3333
-MATH:1460:0132,Calculus for the Biological Sciences,,TTh,5:00P - 5:50P,,,"30, TA",1,0.5,0.3333,0.3333,0.3333
+MATH:1460:0081,Calculus for the Biological Sciences,,TTh,8:30A - 9:20A,,,"09, TA",1,0.5,0.3333,0.3333,0.3333
+MATH:1460:0082,Calculus for the Biological Sciences,,TTh,8:30A - 9:20A,,,"37, TA",1,0.5,0.3333,0.3333,0.3333
+MATH:1460:0091,Calculus for the Biological Sciences,,TTh,9:30A - 10:20A,,,"09, TA",1,0.5,0.3333,0.3333,0.3333
+MATH:1460:0101,Calculus for the Biological Sciences,,TTh,7:30A - 8:20A,,,"57, TA",1,0.5,0.3333,0.3333,0.3333
+MATH:1460:0121,Calculus for the Biological Sciences,,TTh,9:30A - 10:20A,,,"57, TA",1,0.5,0.3333,0.3333,0.3333
+MATH:1460:0122,Calculus for the Biological Sciences,,TTh,12:30P - 1:20P,,,"04, TA",1,0.5,0.3333,0.3333,0.3333
+MATH:1460:0131,Calculus for the Biological Sciences,,TTh,5:00P - 5:50P,,,"30, TA",1,0.5,0.3333,0.3333,0.3333
+MATH:1460:0132,Calculus for the Biological Sciences,,TTh,5:00P - 5:50P,,,"09, TA",1,0.5,0.3333,0.3333,0.3333
 MATH:1460:0231,Calculus for the Biological Sciences,,TTh,12:30P - 1:20P,,,"30, TA",1,0.5,0.3333,0.3333,0.3333
 MATH:1460:0331,Calculus for the Biological Sciences,,TTh,3:30P - 4:20P,,,"37, TA",1,0.5,0.3333,0.3333,0.3333
-MATH:1460:0332,Calculus for the Biological Sciences,,TTh,3:30P - 4:20P,,,"56, TA",1,0.5,0.3333,0.3333,0.3333
+MATH:1460:0332,Calculus for the Biological Sciences,,TTh,3:30P - 4:20P,,,"04, TA",1,0.5,0.3333,0.3333,0.3333
 MATH:1460:0431,Calculus for the Biological Sciences,,TTh,2:00P - 2:50P,,,"37, TA",1,0.5,0.3333,0.3333,0.3333
-MATH:1460:0432,Calculus for the Biological Sciences,,TTh,5:00P - 5:50P,,,"37, TA",1,0.5,0.3333,0.3333,0.3333
+MATH:1460:0432,Calculus for the Biological Sciences,,TTh,5:00P - 5:50P,,,"04, TA",1,0.5,0.3333,0.3333,0.3333
 MATH:1550:000A,Engineer Math I Single Variable Calculus,Instructors:Cynthia Farthing(Primary Instructor),MWF,10:30A - 11:20A,,,,0,0.5,0.3333,0.3333,0.3333
 MATH:1550:000B,Engineer Math I Single Variable Calculus,Instructors:Cynthia Farthing(Primary Instructor),MWF,12:30P - 1:20P,,,,0,0.5,0.3333,0.3333,0.3333
-MATH:1550:0071,Engineer Math I Single Variable Calculus,,TTh,7:30A - 8:20A,,,"68, TA",1,0.5,0.3333,0.3333,0.3333
-MATH:1550:0082,Engineer Math I Single Variable Calculus,,TTh,8:30A - 9:20A,,,"40, TA",1,0.5,0.3333,0.3333,0.3333
-MATH:1550:0083,Engineer Math I Single Variable Calculus,,TTh,8:30A - 9:20A,,,"68, TA",1,0.5,0.3333,0.3333,0.3333
-MATH:1550:0091,Engineer Math I Single Variable Calculus,,TTh,9:30A - 10:20A,,,"67, TA",1,0.5,0.3333,0.3333,0.3333
-MATH:1550:0111,Engineer Math I Single Variable Calculus,,TTh,5:00P - 5:50P,,,"40, TA",1,0.5,0.3333,0.3333,0.3333
-MATH:1550:0112,Engineer Math I Single Variable Calculus,,TTh,11:00A - 11:50A,,,"58, TA",1,0.5,0.3333,0.3333,0.3333
-MATH:1550:0131,Engineer Math I Single Variable Calculus,,TTh,12:30P - 1:20P,,,"61, TA",1,0.5,0.3333,0.3333,0.3333
-MATH:1550:0132,Engineer Math I Single Variable Calculus,,TTh,12:30P - 1:20P,,,"58, TA",1,0.5,0.3333,0.3333,0.3333
-MATH:1550:0134,Engineer Math I Single Variable Calculus,,TTh,2:00P - 2:50P,,,"61, TA",1,0.5,0.3333,0.3333,0.3333
-MATH:1550:0135,Engineer Math I Single Variable Calculus,,TTh,2:00P - 2:50P,,,"40, TA",1,0.5,0.3333,0.3333,0.3333
+MATH:1550:0071,Engineer Math I Single Variable Calculus,,TTh,7:30A - 8:20A,,,"60, TA",1,0.5,0.3333,0.3333,0.3333
+MATH:1550:0082,Engineer Math I Single Variable Calculus,,TTh,8:30A - 9:20A,,,"29, TA",1,0.5,0.3333,0.3333,0.3333
+MATH:1550:0083,Engineer Math I Single Variable Calculus,,TTh,8:30A - 9:20A,,,"40, TA",1,0.5,0.3333,0.3333,0.3333
+MATH:1550:0091,Engineer Math I Single Variable Calculus,,TTh,9:30A - 10:20A,,,"60, TA",1,0.5,0.3333,0.3333,0.3333
+MATH:1550:0111,Engineer Math I Single Variable Calculus,,TTh,5:00P - 5:50P,,,"29, TA",1,0.5,0.3333,0.3333,0.3333
+MATH:1550:0112,Engineer Math I Single Variable Calculus,,TTh,11:00A - 11:50A,,,"59, TA",1,0.5,0.3333,0.3333,0.3333
+MATH:1550:0131,Engineer Math I Single Variable Calculus,,TTh,12:30P - 1:20P,,,"67, TA",1,0.5,0.3333,0.3333,0.3333
+MATH:1550:0132,Engineer Math I Single Variable Calculus,,TTh,12:30P - 1:20P,,,"59, TA",1,0.5,0.3333,0.3333,0.3333
+MATH:1550:0134,Engineer Math I Single Variable Calculus,,TTh,2:00P - 2:50P,,,"40, TA",1,0.5,0.3333,0.3333,0.3333
+MATH:1550:0135,Engineer Math I Single Variable Calculus,,TTh,2:00P - 2:50P,,,"29, TA",1,0.5,0.3333,0.3333,0.3333
 MATH:1550:0331,Engineer Math I Single Variable Calculus,,TTh,3:30P - 4:20P,,,"67, TA",1,0.5,0.3333,0.3333,0.3333
 MATH:1560:0AAA,Engineer Math II: Multivariable Calculus,Instructors:Walter Seaman(Primary Instructor),MWF,12:30P - 1:20P,,,,0,0.5,0.5,0.5,0.3333
 MATH:1560:0A01,Engineer Math II: Multivariable Calculus,Instructors:Walter Seaman(Course Supervisor),TTh,2:30P - 3:20P,,,"47, TA",1,0.5,0.5,0.5,0.3333
@@ -124,8 +124,8 @@ MATH:1860:0BBB,Calculus II,Instructors:Colleen Mitchell(Primary Instructor),MWF,
 MATH:1860:0B03,Calculus II,Instructors:Colleen Mitchell(Course Supervisor),TTh,9:30A - 10:20A,,,"18, TA",1,0.5,0.5,0.5,0.3333
 MATH:1860:0B04,Calculus II,Instructors:Colleen Mitchell(Course Supervisor),TTh,11:00A - 11:50A,,,"38, TA",1,0.5,0.5,0.5,0.3333
 MATH:1860:0FFF,Calculus II,Instructors:Keiko Kawamuro(Primary Instructor),MWF,11:30A - 12:20P,,,,0,0.5,0.5,0.5,0.3333
-MATH:1860:0F10,Calculus II,Instructors:Keiko Kawamuro(Course Supervisor),TTh,12:30P - 1:20P,,,"44, TA (2)",1,0.5,0.5,0.5,0.3333
-MATH:1860:0F11,Calculus II,Instructors:Keiko Kawamuro(Course Supervisor),TTh,2:00P - 2:50P,,,"44, TA (2)",1,0.5,0.5,0.5,0.3333
+MATH:1860:0F10,Calculus II,Instructors:Keiko Kawamuro(Course Supervisor),TTh,12:30P - 1:20P,,,"61, TA",1,0.5,0.5,0.5,0.3333
+MATH:1860:0F11,Calculus II,Instructors:Keiko Kawamuro(Course Supervisor),TTh,2:00P - 2:50P,,,"61, TA",1,0.5,0.5,0.5,0.3333
 MATH:2550:0001,Engineering Math III: Matrix Algebra,Instructors:Miodrag Iovanov(Primary Instructor),MW,12:30P - 1:20P,,,,0,1.0,1.0,0.5,0.5
 MATH:2550:0101,Engineering Math III: Matrix Algebra,Instructors:Miodrag Iovanov(Primary Instructor),MW,1:30P - 2:20P,,,,0,1.0,1.0,0.5,0.5
 MATH:2550:0121,Engineering Math III: Matrix Algebra,Instructors:Raul Curto(Primary Instructor),MW,11:30A - 12:20P,,,,0,1.0,1.0,0.5,0.5
