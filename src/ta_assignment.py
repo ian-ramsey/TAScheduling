@@ -15,7 +15,7 @@ from bs4 import BeautifulSoup
 import requests# Request to website and download HTML contents
 
 def assignTAToCourse(savedir, taData, courseData, taClicked, courseClicked):
-    
+
     if taClicked.get() == "":
         Label(second_frame, text="Please select a TA                                                                         ").grid(row=6,column=0,sticky='w')
     elif courseClicked.get() == "":
@@ -25,9 +25,9 @@ def assignTAToCourse(savedir, taData, courseData, taClicked, courseClicked):
         assignmentMade = 0
         for i in taData.index:
             # probably inefficient
-            if taData.loc[i,"name"] == taClicked.get():
-                if str(taData.loc[i,"assignment"]) == "nan":
-                    taData.loc[i,"assignment"] = [courseClicked.get()]
+            if taData.loc[i, "name"] == taClicked.get():
+                if str(taData.loc[i, "assignment"]) == "nan":
+                    taData.loc[i, "assignment"] = [courseClicked.get()]
                 else:
                     if type(taData.loc[i,"assignment"]) == str:
                         courses = taData.loc[i,"assignment"]
@@ -53,7 +53,7 @@ def assignTAToCourse(savedir, taData, courseData, taClicked, courseClicked):
                             Label(second_frame, text="                                                                          ").grid(row=6,column=0,sticky='w')
                 assignmentMade += 1
         taData.to_csv(savedir + "ta_dataset.csv",index=False)
-        
+
         for i in courseData.index:
             # probably inefficient
             courseString2 = courseData.loc[i,"course_number"] + " - " + courseData.loc[i,"course_name"]
@@ -99,8 +99,8 @@ def assignTAToCourse(savedir, taData, courseData, taClicked, courseClicked):
         else:
             Label(second_frame,text="                                                                                      ").grid(row=6,column=0,sticky='w')
 
-            
-            
+
+
 def saveParameters(savedir,value):
     optpath = sys.argv[0].rstrip("ta_assignment.py")
     with open(optpath+'optimization_parameters.csv', 'w') as f:
@@ -108,16 +108,16 @@ def saveParameters(savedir,value):
         print("parameter,value")
         print("directory," + savedir)
         print("workload_id," + str(value))
-        
+
         sys.stdout = original_stdout
-        
+
 def optimize(savedir,value):
 
     saveParameters(savedir,value)
-    
+
     #Label(second_frame,text="Optimizing...This may take a few minutes (check command line)").grid(row=16,column=0,sticky='w')
     j = julia.Julia(compiled_modules=False)
-    
+
     optpath = sys.argv[0].rstrip("ta_assignment.py")
     curdir = os.path.abspath(os.getcwd())
     os.chdir(optpath)
@@ -125,28 +125,28 @@ def optimize(savedir,value):
     os.chdir(curdir)
     Label(second_frame,text="Done!                                     ").grid(row=16,column=0,sticky='w')
 
-    
+
 def listTAs(savedir, courseClicked2):
     courseTAPref = pd.read_csv(savedir+"courses_requested.csv")
-    
+
     ### change way this is displayed / add scroll bar
     newWindow2 = Toplevel(root)
     newWindow2.geometry("650x450")
     main_frame = Frame(newWindow2)
     main_frame.pack(fill=BOTH, expand=1)
-    
+
     my_canvas = Canvas(main_frame)
     my_canvas.pack(side=LEFT, fill=BOTH, expand=1)
     my_scrollbar = ttk.Scrollbar(main_frame, orient=VERTICAL, command=my_canvas.yview)
     my_scrollbar.pack(side=RIGHT,fill=Y)
-    
+
     my_canvas.configure(yscrollcommand=my_scrollbar.set)
     my_canvas.bind('<Configure>', lambda e: my_canvas.configure(scrollregion = my_canvas.bbox("all")))
-    
+
     second_frame = Frame(my_canvas)
-    
+
     my_canvas.create_window((0,0), window=second_frame, anchor="nw")
-    
+
     Label(second_frame, text="TAs who requested " + courseClicked2.get() + " (lower preference = more preferred).").grid(row=0,column=0,sticky='w')
     Label(second_frame, text="Teaching assistant | year # | pref # | available?").grid(row=1,column=0,sticky='w')
     Label(second_frame, text="").grid(row=2,column=0,sticky='w')
@@ -183,20 +183,20 @@ def listTAs(savedir, courseClicked2):
                 avail = "no"
             Label(second_frame, text=courseTAPref.loc[i,"TA_name"]+ " | y" + str(courseTAPref.loc[i,"TA_year"]) + " | p" + str(courseTAPref.loc[i,"TA_preference"]) + " | " + avail).grid(row=count+12,column=0,sticky='w')
             count += 1
-            
+
 def courseTASearch(savedir, courseData):
     j = julia.Julia(compiled_modules=False)
-    
+
     if not os.path.exists(savedir + "courses_requested.csv"):
         optpath = sys.argv[0].rstrip("ta_assignment.py")
         curdir = os.path.abspath(os.getcwd())
         os.chdir(optpath)
         Main.include("courses_requested.jl")
         os.chdir(curdir)
-    
+
     newWindow = Toplevel(root)
     newWindow.title("Select Course for available TA")
-    
+
     Label(newWindow, text="Select Course for available TA").grid(row=0,column=0,sticky='w')
     courseData2 = pd.read_csv(savedir+"course_dataset.csv")
     courseList2 =[]
@@ -209,7 +209,7 @@ def courseTASearch(savedir, courseData):
 
     courseDrop2 = OptionMenu(newWindow, courseClicked2, *courseList2)
     courseDrop2.grid(row=1,column=0,sticky='w')
-    
+
     resultsButton=Button(newWindow,text="See Students who have this course as a preference and are available.",command=lambda: listTAs(savedir, courseClicked2))
     Label(newWindow,text=" ").grid(row=2,column=0)
     resultsButton.grid(row=3,column=0,sticky='w')
@@ -219,7 +219,7 @@ def viewTAAssignment(taData, taClicked):
     # possibly add preference info
     newWindow = Toplevel(root)
     taname = taClicked.get()
-    
+
     Label(newWindow,text=taname).grid(row=0,column=0)
     for i in taData.index:
         if taname == taData.loc[i,"name"]:
@@ -240,14 +240,14 @@ def viewTAAssignment(taData, taClicked):
                 for course in taData.loc[i,"assignment"]:
                     count+=1
                     Label(newWindow,text=course).grid(row=count,column=0,sticky='w')
-                    
-                    
+
+
 def viewCourseAssignment(courseData, courseClicked):
 
     # possibly add preference info
     newWindow = Toplevel(root)
     coursename = courseClicked.get()
-    
+
     Label(newWindow,text=coursename).grid(row=0,column=0)
     for i in courseData.index:
         if courseData.loc[i,"course_number"] in coursename:
@@ -258,7 +258,7 @@ def viewCourseAssignment(courseData, courseClicked):
                 count+=1
                 Label(newWindow,text=courseData.loc[i,"ta_assigned"]).grid(row=count,column=0,sticky='w')
 
-            
+
 def checkToAssign(savedir):
     for widgets in second_frame.winfo_children():
         widgets.destroy()
@@ -268,17 +268,17 @@ def checkAssignments(savedir):
 
     taData = pd.read_csv(savedir+"ta_dataset.csv")
     courseData = pd.read_csv(savedir+"course_dataset.csv")
-    
+
     # be careful if TA/Course is already assigned
     taList = taData["name"].tolist()
     taList.sort()
-    
+
     courseList = ["Intentionally left unassigned"]
     for i in courseData.index:
         if courseData.loc[i,"ta_needed"] == 1:
             courseString = courseData.loc[i,"course_number"] + " - " + courseData.loc[i,"course_name"]
             courseList.append(courseString)
-    
+
     taClicked = StringVar()
     taClicked.set("")
     courseClicked = StringVar()
@@ -301,27 +301,27 @@ def assignToCheck(savedir):
     for widgets in second_frame.winfo_children():
         widgets.destroy()
     checkAssignments(savedir)
-    
+
 def assignToCourse(savedir):
     for widgets in second_frame.winfo_children():
         widgets.destroy()
-    viewCourseFunction(savedir)       
-    
+    viewCourseFunction(savedir)
+
 def assign(savedir):
 
     taData = pd.read_csv(savedir+"ta_dataset.csv")
     courseData = pd.read_csv(savedir+"course_dataset.csv")
-    
+
     # be careful if TA/Course is already assigned
     taList = taData["name"].tolist()
     taList.sort()
-    
+
     courseList = ["Intentionally left unassigned"]
     for i in courseData.index:
         if courseData.loc[i,"ta_needed"] == 1:
             courseString = courseData.loc[i,"course_number"] + " - " + courseData.loc[i,"course_name"]
             courseList.append(courseString)
-    
+
     taClicked = StringVar()
     taClicked.set("")
     courseClicked = StringVar()
@@ -333,12 +333,12 @@ def assign(savedir):
     Label(second_frame, text="NOTE: If you wish to exclude the TA from the optimization (e.g. for grading), select 'Intentionally left unassigned'").grid(row=3,column=0,sticky='w')
     courseDrop = OptionMenu(second_frame, courseClicked, *courseList)
     courseDrop.grid(row=4,column=0,sticky='w')
-    
+
     myButton = Button(second_frame, text="Assign TA to Course", command=lambda: assignTAToCourse(savedir, taData, courseData, taClicked, courseClicked))
     myButton.grid(row=5,column=0,sticky='w')
     Label(second_frame, text= " ").grid(row=6,column=0,sticky='w')
     Label(second_frame, text= " ").grid(row=7,column=0,sticky='w')
-    
+
     # Adding button here
     Label(second_frame, text = " ").grid(row=8,column=0,sticky='w')
     courseButton =Button(second_frame,text="Search TA availability by Course (may take a while to load when clicked)", command=lambda: courseTASearch(savedir, courseData))
@@ -346,9 +346,9 @@ def assign(savedir):
     Label(second_frame, text=" ").grid(row=10,column=0,sticky='w')
     STRUCTURE = [
     ("Light (courses 0100-1120 and 3000+ full load, 1340-1860 1/2 load)",1),
-    ("Moderate (1120 now 1/2 load, 1340-1550 1/3 load compared to 'Light')",2),
-    ("Heavy (3000-4000 now 1/2 compared to 'Moderate')",3),
-    ("Last Resort (1560-1860 now 1/3 load and 5000+ now 1/2 load compared to 'Heavy')",4)]
+    ("Moderate (1120 now 1/2 load, 1340-1550 1/3 load, 3k-4k now 2/3 compared to 'Light')",2),
+    # ("Heavy (3000-4000 now 1/2 compared to 'Moderate')",3), #### removed.
+    ("Last Resort (1560-1860 now 1/3 load and 5000+ now 1/2 load compared to 'Moderate')",4)]
 
 
     workload_id = IntVar()
@@ -357,7 +357,7 @@ def assign(savedir):
     for text, val in STRUCTURE:
         count+=1
         Radiobutton(second_frame, text=text, variable=workload_id, value=val).grid(row=10+count,column=0,sticky='w')#, command=lambda: clicked(r.get())).pack()
-        
+
     optimizeButton = Button(second_frame, text="Run optimization...This may take a few minutes (check command line)", command=lambda: optimize(savedir, workload_id.get()))
     optimizeButton.grid(row=15,column=0,sticky='w')
     Label(second_frame, text="").grid(row=16,column=0,sticky='w')
@@ -373,7 +373,7 @@ def viewCoursetoAssign(savedir):
     for widgets in second_frame.winfo_children():
       widgets.destroy()
     assign(savedir)
-    
+
 
 def viewCourseFunction_2(my_scrollbar_3,my_canvas_3, second_frame_3,savedir, courseUpdateText, submit):
 
@@ -382,10 +382,10 @@ def viewCourseFunction_2(my_scrollbar_3,my_canvas_3, second_frame_3,savedir, cou
     for i in courseData.index:
         checkBoxDict[i] = tk.IntVar(value=courseData.loc[i,"ta_needed"])
         courseNumber = courseData.loc[i,"course_number"]
-        courseName = courseData.loc[i,"course_name"] 
+        courseName = courseData.loc[i,"course_name"]
         checkButtonText = courseNumber + " - " + courseName
         tk.Checkbutton(second_frame_3, text=checkButtonText, variable=checkBoxDict[i]).pack(anchor='w')
-    
+
     submit.config(command=lambda: updateTaughtCourses(my_scrollbar_3,my_canvas_3, second_frame_3, courseData, savedir, checkBoxDict, submit))
     count = 1
     for update in courseUpdateText:
@@ -398,30 +398,30 @@ def updateTaughtCourses(my_scrollbar_3,my_canvas_3, second_frame_3, courseData, 
         if courseData.loc[i, "ta_needed"] == 1 and checkBoxDict[i].get() == 0:
             courseData.loc[i, "ta_needed"] = 0
             courseNumber = courseData.loc[i,"course_number"]
-            courseName = courseData.loc[i,"course_name"] 
+            courseName = courseData.loc[i,"course_name"]
             checkButtonText = courseNumber + " - " + courseName
             courseUpdateText.append(checkButtonText + " will no longer be taught by a TA.")
             #Label(viewCourse, text = checkButtonText + " will no longer be taught by a TA.                             ").pack()
         elif courseData.loc[i, "ta_needed"] == 0 and checkBoxDict[i].get() == 1:
             courseData.loc[i, "ta_needed"] = 1
             courseNumber = courseData.loc[i,"course_number"]
-            courseName = courseData.loc[i,"course_name"] 
+            courseName = courseData.loc[i,"course_name"]
             checkButtonText = courseNumber + " - " + courseName
             courseUpdateText.append(checkButtonText + " will now be taught by a TA.")
             #Label(viewCourse, text = checkButtonText + " will now be taught by a TA.                                   ").pack()
-    
+
     courseData.to_csv(savedir + "course_dataset.csv",index=False)
-    
+
     for widgets in second_frame_3.winfo_children():
       widgets.destroy()
-    
+
     viewCourseFunction_2(my_scrollbar_3,my_canvas_3, second_frame_3,savedir, courseUpdateText, submit)
     #viewCourse.destroy()
-    
+
 
 
 def viewCourseFunction(savedir):
-    
+
     ### start scrollbar here
     #main_frame_2 = Frame(second_frame).grid(row=0,column=0,ipadx=640,sticky='nw')
     #create a canvas
@@ -430,34 +430,34 @@ def viewCourseFunction(savedir):
     #main_frame_2.pack(fill=BOTH, expand=1)
     #my_canvas_2.pack(side=LEFT, fill=BOTH, expand=1)
     #my_canvas_2.config(bg='green')
-    
+
     # add a scrollbar to the canvas
     my_scrollbar_3 = ttk.Scrollbar(second_frame, orient=VERTICAL, command=my_canvas_3.yview)
     # this needs to change...
     my_scrollbar_3.grid(row=0,column=1, ipady=135)
-    
+
     #my_scrollbar_2.pack(side=RIGHT, fill=Y)
-    
+
     # configure the canvas
     my_canvas_3.configure(yscrollcommand=my_scrollbar_3.set)
     my_canvas_3.bind('<Configure>', lambda e: my_canvas_3.configure(scrollregion=my_canvas_3.bbox("all")))
-    
+
     # create another frame inside the canvas
     second_frame_3 = Frame(my_canvas_3)#.grid(row=0,column=0,ipadx=640,sticky='nw')
-    
+
     #add that new frame to a window in the canvas
     my_canvas_3.create_window((0,0), window=second_frame_3, anchor="nw")
     ### end scroll bar here. make sure to add items to "second_frame"
-    
+
     courseData = pd.read_csv(savedir+"course_dataset.csv")
     checkBoxDict = {}
     for i in courseData.index:
         checkBoxDict[i] = tk.IntVar(value=courseData.loc[i,"ta_needed"])
         courseNumber = courseData.loc[i,"course_number"]
-        courseName = courseData.loc[i,"course_name"] 
+        courseName = courseData.loc[i,"course_name"]
         checkButtonText = courseNumber + " - " + courseName
         tk.Checkbutton(second_frame_3, text=checkButtonText, variable=checkBoxDict[i]).pack(anchor='w')
-        
+
     submit = Button(second_frame, text="Make checked courses those to be taught by TAs", command=lambda: updateTaughtCourses(my_scrollbar_3,my_canvas_3, second_frame_3, courseData, savedir, checkBoxDict, submit))
     submit.grid(row=1,column=0,sticky='w')
     nextWindow = Button(second_frame, text="Move on to next step", command=lambda: viewCoursetoAssign(savedir)).grid(row=2,column=0,sticky='w')
@@ -467,10 +467,10 @@ def viewCourseFunction(savedir):
 def cleanCourseData(savedir):
     data = pd.read_csv(savedir+"courses_scraped.csv")
 
-    data["days1"] = np.NaN
-    data["times1"] = np.NaN
-    data["days2"] = np.NaN
-    data["times2"] = np.NaN
+    data["days1"] = np.nan
+    data["times1"] = np.nan
+    data["days2"] = np.nan
+    data["times2"] = np.nan
 
     # if a course has two day-times (e.g. MATH:1005 in sp22), the day-times need to be split
 
@@ -487,17 +487,16 @@ def cleanCourseData(savedir):
             data.loc[ind, "times2"] = twotimes[1]
         else:
             data.loc[ind, "times1"] = data.loc[ind, "times"]
-            
+
     data = data.drop(["times", "days"], axis=1)
 
     data["ta_assigned"] = ""
     data["ta_needed"] = 0
-    
+
     data["workload_1"] = 1.0
     data["workload_2"] = 1.0
-    data["workload_3"] = 1.0
     data["workload_4"] = 1.0
-    
+
     #hard coding "cross-listed" discussions for Fall
     #index_drop = [];
     for i in data.index:
@@ -516,7 +515,7 @@ def cleanCourseData(savedir):
             data.loc[i,"course_name"] = "Abstract Algebra I/A Rigorous Intro to Abstract Algebra"
             #index_drop.append(i)
     #data = data.drop(index_drop)
-    
+
     # ta_needed is to be used to suggest the courses to assign TAs, which can be turned off/on by DGS
     # suggestions are based on the course number being <2000 or between 3600,6000 strictly,
     # as well as if "Primary Instructor" is NOT listed and if the section number ends in a number
@@ -529,33 +528,27 @@ def cleanCourseData(savedir):
             data.loc[i,"workload_1"] = 1
             data.loc[i,"workload_2"] = 1
             data.loc[i,"workload_3"] = 1
-            data.loc[i,"workload_4"] = 1
         elif course_number == 1120:
             data.loc[i,"workload_1"] = 1
             data.loc[i,"workload_2"] = 0.5
             data.loc[i,"workload_3"] = 0.5
-            data.loc[i,"workload_4"] = 0.5
         elif course_number < 1560:
             data.loc[i,"workload_1"] = 0.5
             data.loc[i,"workload_2"] = 0.3333
             data.loc[i,"workload_3"] = 0.3333
-            data.loc[i,"workload_4"] = 0.3333
         elif course_number < 1861:
             data.loc[i,"workload_1"] = 0.5
             data.loc[i,"workload_2"] = 0.5
-            data.loc[i,"workload_3"] = 0.5
-            data.loc[i,"workload_4"] = 0.3333
+            data.loc[i,"workload_3"] = 0.3333
         elif course_number < 5000:
             data.loc[i,"workload_1"] = 1
-            data.loc[i,"workload_2"] = 1
+            data.loc[i,"workload_2"] = .6666
             data.loc[i,"workload_3"] = 0.5
-            data.loc[i,"workload_4"] = 0.5
         elif course_number < 6000:
             data.loc[i,"workload_1"] = 1
             data.loc[i,"workload_2"] = 1
-            data.loc[i,"workload_3"] = 1
-            data.loc[i,"workload_4"] = 0.5
-                
+            data.loc[i,"workload_3"] = 0.5
+
     data = data.rename(columns = {"instructors":"course_supervisor(s)"})
 
     data.to_csv(savedir+"course_dataset.csv",index=False)
@@ -564,7 +557,7 @@ def scrapeCourseData(savedir, url):
     with open(savedir+'courses_scraped.csv', 'w') as f:
         sys.stdout = f # Change the standard output to the file we created.
         print("course_number,course_name,times,days,instructors")
-        
+
         for i in range(len(url)):
             req=requests.get(url[i])
             content=req.content
@@ -619,7 +612,7 @@ def createCourseData(savedir, entry1, entry2, entry3, entry4, entry5):
         url.append(entry4.get())
     if not entry5.get() == "":
         url.append(entry5.get())
-    
+
     Label(second_frame, text = "Scraping...").grid(row=13,column=0,sticky='w')
     scrapeCourseData(savedir, url)
     Label(second_frame, text = "...Cleaning...").grid(row=14,column=0,sticky='w')
@@ -632,28 +625,28 @@ def loadCourseToViewCourse(savedir):
     viewCourseFunction(savedir)
 
 def loadCourseFunction(savedir):
-    
+
     Label(second_frame, text="Enter in URLs from MyUI for search results of ALL math courses below.").grid(row=0,column=0,sticky='w')
     Label(second_frame, text="URL 1: ").grid(row=1,column=0,sticky='w')
     entry1 = Entry(second_frame, width=100, borderwidth=5)
     entry1.grid(row=2,column=0,sticky='w')
-    
+
     Label(second_frame, text="URL 2: ").grid(row=3,column=0,sticky='w')
     entry2 = Entry(second_frame, width=100, borderwidth=5)
     entry2.grid(row=4,column=0,sticky='w')
-    
+
     Label(second_frame, text="URL 3: ").grid(row=5,column=0,sticky='w')
     entry3 = Entry(second_frame, width=100, borderwidth=5)
     entry3.grid(row=6,column=0,sticky='w')
-    
+
     Label(second_frame, text="URL 4: ").grid(row=7,column=0,sticky='w')
     entry4 = Entry(second_frame, width=100, borderwidth=5)
     entry4.grid(row=8,column=0,sticky='w')
-    
+
     Label(second_frame, text="URL 5: ").grid(row=9,column=0,sticky='w')
     entry5 = Entry(second_frame, width=100, borderwidth=5)
     entry5.grid(row=10,column=0,sticky='w')
-    
+
     addURL = Button(second_frame, text="Add URLs and create course dataset", command=lambda: createCourseData(savedir, entry1, entry2, entry3, entry4, entry5))
     addURL.grid(row=11,column=0,sticky='w')
     nextButton = Button(second_frame, text="Next", command=lambda: loadCourseToViewCourse(savedir))
@@ -663,8 +656,8 @@ def DeleteTAToLoadCourse(savedir):
     for widgets in second_frame.winfo_children():
       widgets.destroy()
     loadCourseFunction(savedir)
-    
-    
+
+
 def viewTASelection_2(my_scrollbar_2,my_canvas_2, second_frame_2, savedir, submit):
 
     TAData = pd.read_csv(savedir+"ta_dataset.csv")
@@ -677,12 +670,12 @@ def viewTASelection_2(my_scrollbar_2,my_canvas_2, second_frame_2, savedir, submi
         TAName = TAData.loc[i,"name"]
         tk.Checkbutton(second_frame_2, text=TAName, variable=checkBoxDict[i]).pack(anchor='w')#.grid(row=count,column=0,sticky='nw')
         count+=1
-        
+
     submit.configure(command =lambda: deleteTAs(my_scrollbar_2, my_canvas_2, second_frame_2, TAData, savedir, checkBoxDict, submit))#.grid(row=3,column=0,sticky='sw')#.pack(anchor='sw')
 
-        
-    
-    
+
+
+
 def TAToViewDeleteTA_2(my_scrollbar_2,my_canvas_2, second_frame_2, savedir, submit):
     for widgets in second_frame_2.winfo_children():
         widgets.destroy()
@@ -691,20 +684,20 @@ def TAToViewDeleteTA_2(my_scrollbar_2,my_canvas_2, second_frame_2, savedir, subm
     #my_canvas_2.destroy()
     #for widgets in second_frame.winfo_children():
     #  widgets.destroy()
-    
+
     viewTASelection_2(my_scrollbar_2,my_canvas_2, second_frame_2, savedir, submit)
-    
+
 def deleteTAs(my_scrollbar_2, my_canvas_2, second_frame_2, TAData, savedir, checkBoxDict, submit):
     for i in TAData.index:
         TAData.loc[i,"delete_row"] = checkBoxDict[i].get()
-    
+
     deleteIndex = (TAData["delete_row"] == 0)
     #Label(second_frame, text=str(deleteIndex)).pack()
     TAData = TAData[deleteIndex]
     TAData.to_csv(savedir + "ta_dataset.csv",index=False)
-    
+
     TAToViewDeleteTA_2(my_scrollbar_2, my_canvas_2, second_frame_2, savedir, submit)
-    
+
 
 
 def viewTASelection(savedir):
@@ -718,25 +711,25 @@ def viewTASelection(savedir):
     #main_frame_2.pack(fill=BOTH, expand=1)
     #my_canvas_2.pack(side=LEFT, fill=BOTH, expand=1)
     #my_canvas_2.config(bg='green')
-    
+
     # add a scrollbar to the canvas
     my_scrollbar_2 = ttk.Scrollbar(second_frame, orient=VERTICAL, command=my_canvas_2.yview)
     # this needs to change...
     my_scrollbar_2.grid(row=0,column=1, ipady=135)
-    
+
     #my_scrollbar_2.pack(side=RIGHT, fill=Y)
-    
+
     # configure the canvas
     my_canvas_2.configure(yscrollcommand=my_scrollbar_2.set)
     my_canvas_2.bind('<Configure>', lambda e: my_canvas_2.configure(scrollregion=my_canvas_2.bbox("all")))
-    
+
     # create another frame inside the canvas
     second_frame_2 = Frame(my_canvas_2)#.grid(row=0,column=0,ipadx=640,sticky='nw')
-    
+
     #add that new frame to a window in the canvas
     my_canvas_2.create_window((0,0), window=second_frame_2, anchor="nw")
     ### end scroll bar here. make sure to add items to "second_frame"
-    
+
     Label(second_frame, text = "Review the TAs. If any look incorrect, or if there are duplicates, check the listing and click 'Delete checked TAs'").grid(row=1,column=0,sticky='sw')#.pack(anchor='sw')
     Label(second_frame, text = "to remove them. Click 'Move on to next step' to move on. ").grid(row=2,column=0,sticky='sw')#.pack(anchor='sw')
     submit = Button(second_frame, text="Delete checked TAs", command=lambda: deleteTAs(my_scrollbar_2, my_canvas_2, second_frame_2, TAData, savedir, checkBoxDict, submit))
@@ -744,7 +737,7 @@ def viewTASelection(savedir):
     nextWindow = Button(second_frame, text="Move on to next step (do not delete listed TAs)", command=lambda: DeleteTAToLoadCourse(savedir))
     nextWindow.grid(row=4,column=0,sticky='sw')#.pack(anchor='sw')
     Label(second_frame, text=" ").grid(row=5,column=0,ipadx=310)#.pack(anchor='sw')
-    
+
 
     TAData = pd.read_csv(savedir+"ta_dataset.csv")
     TAData["delete_row"] = 0
@@ -756,11 +749,11 @@ def viewTASelection(savedir):
         TAName = TAData.loc[i,"name"]
         tk.Checkbutton(second_frame_2, text=TAName, variable=checkBoxDict[i]).pack(anchor='w')#.grid(row=count,column=0,sticky='nw')
         count+=1
-        
-def alphabetizeData(filename, savedir): 
+
+def alphabetizeData(filename, savedir):
     ta_list = pd.read_csv(filename)
     data = pd.read_csv(savedir + "ta_dataset.csv")
-    
+
     ta_list = ta_list.dropna(subset=["Name"])
     ta_list = ta_list.sort_values("Name").reset_index(drop=True)
     for i in range(len(ta_list)):
@@ -772,14 +765,14 @@ def alphabetizeData(filename, savedir):
     for i in range(len(ta_list)):
         ta_list.loc[i,"Name"] = ta_list.loc[i,"Name"].lstrip()
     ta_list = ta_list.sort_values("Name")
-    
+
     data["new_name"] = np.nan
     ta_list["found"] = 0
-    
+
     ta_list["Last Name"] = "temp"
     for i in ta_list.index:
         ta_list.loc[i,"Last Name"] = ta_list.loc[i,"Name"].split(",")[0]
-        
+
     for i in ta_list.index:
         ta_last = ta_list.loc[i,"Last Name"].lower()
         ta_last_words = ta_last.split(" ")
@@ -801,13 +794,13 @@ def alphabetizeData(filename, savedir):
                         elif ta_list.loc[i,"found"] > 1:
                             data.loc[j,"new_name"] = str(ta_list.loc[i,"Name"] + " (" + str(ta_list.loc[i,"found"]) + ")")
                         break
-                        
+
     data = data.rename(columns = {"name":"old_name"})
     col_to_move = data.pop("new_name")
     data.insert(0, "new_name", col_to_move)
     data = data.rename(columns = {"new_name":"name"})
     data = data.sort_values("name")
-    
+
     newWindow = Toplevel(root)
     newWindow.title("TA warnings!")
     Label(newWindow, text="Warnings regarding listed TAs and those filling out the survey appear below.").pack(anchor='w')
@@ -822,16 +815,16 @@ def alphabetizeData(filename, savedir):
             #data = data.concat({"name":ta_list.loc[i,"Name"], "year_in_program":ta_list.loc[i,"Year"]}, ignore_index=True)
         elif ta_list.loc[i,"found"] > 1:
             Label(newWindow, text="Warning: " + ta_list.loc[i,"Name"] + " found in survey data " + str(ta_list.loc[i,"found"]) + " times.").pack(anchor='w')
-        
+
         data = data.sort_values("name")
     for j in data.index:
         if str(data.loc[j,"name"]) == "nan":
             data.loc[j,"name"] = data.loc[j,"old_name"]
             Label(newWindow,text="Warning: " + data.loc[j,"old_name"] + " appears in survey respondants but not TA List. Kept in data set and stored at end.").pack(anchor='w')
-            
-            
+
+
     data.to_csv(savedir + "ta_dataset.csv", index = False)
-    
+
 
 def alphabetizeTAtoDeleteTA(savedir):
     for widgets in second_frame.winfo_children():
@@ -843,17 +836,17 @@ def loadAndAlphabetizeFunction(savedir):
     filename = filedialog.askopenfilename(title="Select a File", filetypes=[("csv files","*.csv")])
     alphabetizeData(filename, savedir)
     Label(second_frame, text="Done!").grid(row=6,column=0,sticky='w')
-    
+
 def alphabetizeTA(savedir):
     Label(second_frame, text="Now load in the TA list of old and new TAs.").grid(row=0,column=0,sticky='w')
     Label(second_frame, text="Make sure you are loading in a CSV file (convert excel to csv before uploading.").grid(row=1,column=0,sticky='w')
     Label(second_frame, text="Click the button below to add the file.").grid(row=2,column=0,sticky='w')
-    
+
     backButton = Button(second_frame, text="Go back", command=newProject).grid(row=4,column=0,sticky='w')
     nextButton = Button(second_frame, text="Next", command=lambda: alphabetizeTAtoDeleteTA(savedir)).grid(row=5,column=0,sticky='w')
-    
+
     loadTAButton = Button(second_frame, text="alphabetize TAs",command=lambda: loadAndAlphabetizeFunction(savedir)).grid(row=3,column=0,sticky='w')
-    
+
 def TAToAlphabetizeTA(savedir):
     for widgets in second_frame.winfo_children():
       widgets.destroy()
@@ -922,7 +915,7 @@ def cleanTAData(rawFile, saveDir):
             data.loc[idx, "year_in_program"] = 7
         else:
             data.loc[idx, "year_in_program"] = int(data.loc[idx, "year_in_program"])
-        
+
     # this will likely be customizable, as well.
     data.to_csv(saveDir + "ta_dataset.csv",index=False)
 
@@ -936,7 +929,7 @@ def newTAFileFunction(savedir):
     Label(second_frame, text="First load in the TA survey results from qualtrics.").grid(row=0,column=0,sticky='w')
     Label(second_frame, text="Make sure you are loading in the full CSV file.").grid(row=1,column=0,sticky='w')
     Label(second_frame, text="Click the button below to add the file.").grid(row=2,column=0,sticky='w')
-    
+
     loadTAButton = Button(second_frame, text="Load and clean TA survey results",command=lambda: loadTAFunction(savedir)).grid(row=3,column=0,sticky='w')
     backButton = Button(second_frame, text="Go back", command=newProject).grid(row=4,column=0,sticky='w')
     #find a way to disable until loadTAButton is loaded
@@ -955,7 +948,7 @@ def saveDirectory(savedir,optpath):
         print("parameter,value")
         print("directory," + savedir)
         #print("workload_id," + str(value))
-        
+
         sys.stdout = original_stdout
 
 
@@ -964,7 +957,7 @@ def existingProjectFunction():
     savedir = filedialog.askdirectory(title='Select folder that contains data')+'/'
     for widgets in second_frame.winfo_children():
         widgets.destroy()
-        
+
     assign(savedir)
 
 def process_files():
@@ -977,25 +970,25 @@ def process_files():
     saveDirectory(savedir,optpath)
     Label(second_frame, text="Project directory created!").grid(row=4,column=0,sticky='w')
     Label(second_frame, text=savedir).grid(row=5,column=0,sticky='w')
-    
+
 def projectToTA(savedir):
     for widgets in second_frame.winfo_children():
       widgets.destroy()
     newTAFileFunction(savedir)
-   
+
 def newProject():
     for widgets in second_frame.winfo_children():
       widgets.destroy()
-      
+
     #second_frame.columnconfigure(0, weight=1)
     #second_frame.columnconfigure(1, weight=1)
     instructions = Label(second_frame, text="Click the 'Choose Directory' button to choose a directory in which the files will be saved.")
     instructions.grid(row=0,column=0,sticky='w')
-    
+
     newProjectDirectoryButton = Button(second_frame, text="Choose Directory",command=lambda: process_files()).grid(row=1,column=0,sticky='w')
     backButton = Button(second_frame, text="Go back", command=backToMain).grid(row=2,column=0,sticky='w')
     nextButton = Button(second_frame, text="Next", command=lambda: projectToTA(savedir)).grid(row=3,column=0,sticky='w')
-    
+
 
 
 # main window

@@ -34,7 +34,7 @@ workload = Array{Union{Missing, Real}}(course_dataset[:,"workload_$(workload_id)
 
 
 function nolater(x::AbstractString,y::AbstractString)
-# returns 1 if x is no later than x; 0 otherwise
+# returns 1 if x is no later than y; 0 otherwise
     xP = (x[end] == 'P');  # 1 if x is PM; 0 otherwise
     yP = (y[end] == 'P');  # 1 if y is PM; 0 otherwise
     if xP < yP
@@ -559,10 +559,10 @@ end
 using JuMP, Gurobi, Statistics
 
 # Model parameters
-α = [8,7,6,5,4];
-β = [8,6,4,2,0];
-θ = [3,4,6,3];
-φ = [8,4];
+α = [8,7,6,5,4]; # course preference factor
+β = [8,6,4,2,0]; # time preference factor
+θ = [3,4,6,3];   # misc; θ[1] <->
+φ = [8,4];       # φ[1] <-> course coherence; φ[2] <-> instructor coherence.
 
 # Course coefficients
 p_course = zeros(m,n);
@@ -573,6 +573,9 @@ for j in first_year_TAs
     else
         for p = 1:5
             if course_pref[j,p] in hard_course_codes
+                continue
+            elseif !(course_pref[j,p] in TA_course_codes)
+                println("WARNING: " * TA_name[TA[j]] * " listed nonexistent course " * course_pref[j,p] * " as a preference!")
                 continue
             else
                 p_course[j,sections_of[course_pref[j,p]]] .= α[p];
@@ -587,6 +590,10 @@ for j in higher_year_TAs
         p_course[j,:] .= θ[1];
     else
         for p = 1:5
+            if !(course_pref[j,p] in TA_course_codes)
+                println("WARNING: " * TA_name[TA[j]] * " listed nonexistent course " * course_pref[j,p] * " as a preference!")
+                continue
+            end
             p_course[j,sections_of[course_pref[j,p]]] .= α[p];
         end
     end
@@ -628,12 +635,12 @@ end
 # Initialize the model
 model = Model(Gurobi.Optimizer);
 # Define decision variables
-@variable(model, x[1:m,1:n], binary=true);
-@variable(model, u[1:n], binary=true);
-@variable(model, y[1:m,1:n_course], binary=true);
-@variable(model, z[1:m,1:n_course] >=0, integer=true);
-@variable(model, ys[1:m,1:n_subgroup], binary=true);
-@variable(model, zs[1:m,1:n_subgroup] >=0, integer=true);
+@variable(model, x[1:m,1:n], binary=true); #x[j,k] is whether student j teaches section k
+@variable(model, u[1:n], binary=true); #whether section k is being taught by 2 TAs
+@variable(model, y[1:m,1:n_course], binary=true); #whether student j is teaching course k
+@variable(model, z[1:m,1:n_course] >=0, integer=true); #the number of ``bonus'' sections of a course that a TA is teaching
+@variable(model, ys[1:m,1:n_subgroup], binary=true); #whether student j is working under instructor k
+@variable(model, zs[1:m,1:n_subgroup] >=0, integer=true); #the number of ``bonus'' sections under an instructor
 # Set the objective
 @objective(model, Max, sum(p[j,k]*x[j,k] for j=1:m, k=1:n)
                         + φ[1] * sum(z[j,c] for j=1:m, c=group_index)
@@ -651,8 +658,10 @@ for k = 1:n
     end
 end
 for j = 1:m
+    # Every TA should be employed
+    @constraint(model, 0.25 <= sum(w[k]*x[j,k] for k=1:n))
     # No TA can be overloaded
-    @constraint(model, 0.25 <= sum(w[k]*x[j,k] for k=1:n) <= 1);
+    @constraint(model, sum(w[k]*x[j,k] for k=1:n) <= 1);
 end
 # The following TAs will get one discussion session to teach
 #for j in [8, 15, 17, 23, 31, 33, 35]
@@ -691,51 +700,55 @@ end
 
 status = optimize!(model);
 # Print results
-println(termination_status(model));
-println("Optimal Value: ", objective_value(model));
-if sum(value(u[k]) for k=1:n) > 0.5
-    println("NO FEASIBLE SOLUTION!")
+if !(is_solved_and_feasible(model))
+    println(termination_status(model));
+    println("Optimization terminated.")
 else
-    println("There is a feasible solution!")
-end
-# Results for courses
-course_result = String[];
-for k = 1:n
-    for j = 1:m
-        if value(x[j,k]) > 0.5
-            #println("  x[$j,$k] = ", value.(x[j,k]));
-            push!(course_result, number[TA_courses[k]] * " : " * TA_name[TA[j]]);
-        end
+    println("Optimal Value: ", objective_value(model));
+    if sum(value(u[k]) for k=1:n) > 0.5
+        println("NO FEASIBLE SOLUTION!")
+    else
+        println("There is a feasible solution!")
     end
-end
-# Results for TAs
-TA_result = Array{String,1}(undef,m);
-results = Tuple{Int64,Int64}[];
-for j = 1:m
-    TA_result[j] = "[";
-    k_num = 0;
+    # Results for courses
+    course_result = String[];
     for k = 1:n
-        if value(x[j,k]) > 0.5
-            k_num += 1;
-            #println("  x[$j,$k] = ", value.(x[j,k]));
-            #println(TA_name[j]," : ",number[TAcourses[k]]);
-            push!(results, (j,k));
-            if k_num > 1
-                TA_result[j] *= ", ";
+        for j = 1:m
+            if value(x[j,k]) > 0.5
+                #println("  x[$j,$k] = ", value.(x[j,k]));
+                push!(course_result, number[TA_courses[k]] * " : " * TA_name[TA[j]]);
             end
-            TA_result[j] *= "'" * number[TA_courses[k]] * " - " * course_name[TA_courses[k]] * "'";
         end
     end
-    TA_result[j] *= "]";
-end
+    # Results for TAs
+    TA_result = Array{String,1}(undef,m);
+    results = Tuple{Int64,Int64}[];
+    for j = 1:m
+        TA_result[j] = "[";
+        k_num = 0;
+        for k = 1:n
+            if value(x[j,k]) > 0.5
+                k_num += 1;
+                #println("  x[$j,$k] = ", value.(x[j,k]));
+                #println(TA_name[j]," : ",number[TAcourses[k]]);
+                push!(results, (j,k));
+                if k_num > 1
+                    TA_result[j] *= ", ";
+                end
+                TA_result[j] *= "'" * number[TA_courses[k]] * " - " * course_name[TA_courses[k]] * "'";
+            end
+        end
+        TA_result[j] *= "]";
+    end
 
-## WRITING THE ASSIGNMENT RESULTS
-for (j,k) in results
-    TA_assigned[TA_courses[k]] = TA_name[TA[j]];
-end
-course_dataset.ta_assigned = TA_assigned;
-CSV.write("course_output.csv",course_dataset)
+    ## WRITING THE ASSIGNMENT RESULTS
+    for (j,k) in results
+        TA_assigned[TA_courses[k]] = TA_name[TA[j]];
+    end
+    course_dataset.ta_assigned = TA_assigned;
+    CSV.write("course_output.csv",course_dataset)
 
-assignment[TA] = TA_result;
-TA_dataset.assignment = assignment;
-CSV.write("TA_output.csv",TA_dataset)
+    assignment[TA] = TA_result;
+    TA_dataset.assignment = assignment;
+    CSV.write("TA_output.csv",TA_dataset)
+end
